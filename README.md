@@ -8,7 +8,9 @@ Can small learned corrections help a pretrained robot policy complete household 
 
 > **Submitted October 11, 2026 · Under verification.** Portal acceptance is confirmed; organizer performance verification is pending.
 
-[Run the policy](EVALUATION-README.md) · [Watch the rollouts](VIDEOS.md) · [Presentation](docs/reports/submission-2026/presentation-pilot6-submission12.pdf) · [Download results](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/package/submission12-final.zip?download=true)
+[Run the policy](EVALUATION-README.md) · [Watch the rollouts](VIDEOS.md) · [Presentation](docs/reports/submission-2026/presentation-pilot6-submission12.pdf) · [Research paper](docs/reports/submission-2026/research-paper-pilot6-submission12.pdf)
+
+[Download results](RESULTS.md) — Preview the package before downloading.
 
 ## Final results
 

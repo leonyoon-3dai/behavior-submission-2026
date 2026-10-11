@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="44" viewBox="0 0 260 44" role="img" aria-labelledby="title">
+  <title id="title">Download results ZIP</title>
+  <rect width="260" height="44" rx="8" fill="#183047"/>
+  <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 11v14m-5-5 5 5 5-5M16 28v5h16v-5"/>
+  </g>
+  <text x="47" y="28" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#ffffff">Download results ZIP</text>
+</svg>
