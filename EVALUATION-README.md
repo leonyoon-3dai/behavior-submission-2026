@@ -5,9 +5,9 @@ Author: Leonard Yoon. Affiliation: Independent. Final policy seed:0. Policy rout
 ## Public artifacts and image identity
 
 - Docker image: `ghcr.io/leonyoon-3dai/behavior-submission-2026:submission12-20261011`
-- Digest-pinned URI: `ghcr.io/leonyoon-3dai/behavior-submission-2026:submission12-20261011`
-- Registry publication status: `pending`
-- Anonymous registry pull verified: `False`
+- Digest-pinned URI: `ghcr.io/leonyoon-3dai/behavior-submission-2026@sha256:5870a511c06fae3ee18289ed711131a9d2545aa9fd2c1e311b18980e4b07ad7e`
+- Registry publication status: `registry_public_anonymous_digest_pull_verified`
+- Anonymous registry pull verified: `True`
 - Local image configuration ID: `sha256:3098b31a4a6b222bc4a1f23f879da6a72b54bc15d5cc89183b2fff99c413cf4e` (distinct from registry manifest digest).
 - Final artifact repository: https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026
 - Result ZIP: https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/package/submission12-final.zip?download=true
@@ -19,8 +19,8 @@ Author: Leonard Yoon. Affiliation: Independent. Final policy seed:0. Policy rout
 Linux x86_64, NVIDIA driver and Docker NVIDIA Container Toolkit are required. Use one GPU per policy server, one evaluator connection, batch size1. Port8000 is a binary msgpack WebSocket endpoint; `/healthz` and `/metadata` are HTTP endpoints. Returned action has shape `(1,23)`; reset has no response. Action-chunk replay is disabled.
 
 ```bash
-docker pull ghcr.io/leonyoon-3dai/behavior-submission-2026:submission12-20261011
-docker run --rm --name robogoomy-policy --gpus device=0 --cpus 16 --shm-size 8g -p 127.0.0.1:8000:8000 ghcr.io/leonyoon-3dai/behavior-submission-2026:submission12-20261011
+docker pull ghcr.io/leonyoon-3dai/behavior-submission-2026@sha256:5870a511c06fae3ee18289ed711131a9d2545aa9fd2c1e311b18980e4b07ad7e
+docker run --rm --name robogoomy-policy --gpus device=0 --cpus 16 --shm-size 8g -p 127.0.0.1:8000:8000 ghcr.io/leonyoon-3dai/behavior-submission-2026@sha256:5870a511c06fae3ee18289ed711131a9d2545aa9fd2c1e311b18980e4b07ad7e
 ```
 
 From a second terminal:
