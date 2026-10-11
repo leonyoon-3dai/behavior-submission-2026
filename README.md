@@ -1,5 +1,7 @@
 # robogoomy · Ilia + EXPO-RT
 
+> Submitted October 11, 2026. Team **robogoomy** · **Ilia + EXPO-RT**. Leaderboard status: **Under verification**. Submission ID: `20261011T111517Z-robogoomy-ilia-expo-rt`. Receipt confirms acceptance; organizer performance verification is pending.
+
 **BEHAVIOR-1K 2026 | Leonard Yoon | Independent**
 
 - **Goal:** evaluate a frozen household-manipulation policy with small task-specific action edits.
