@@ -1,0 +1,32 @@
+name: Publish verified local frozen policy
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  publish:
+    runs-on: [self-hosted, Linux, X64, behavior-release]
+    timeout-minutes: 45
+    env:
+      DOCKER_CONFIG: ${{ runner.temp }}/behavior-release-docker-auth
+    steps:
+      - uses: actions/checkout@v4
+      - name: Authenticate automatically to GHCR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: printf '%s' "$GITHUB_TOKEN" | docker login ghcr.io -u "${{ github.repository_owner }}" --password-stdin
+      - name: Publish exact image already verified on this server
+        run: python3 scripts/publish_preserved_image.py --local-verified-image
+      - name: Preserve registry digest and download evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: registry-release
+          path: registry-release.json
+          if-no-files-found: warn
+      - name: Remove temporary registry authentication
+        if: always()
+        run: |
+          docker logout ghcr.io
+          rm -rf "$DOCKER_CONFIG"

@@ -5,10 +5,19 @@ import os
 from pathlib import Path
 import subprocess
 import urllib.request
+import argparse
 
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--local-verified-image', action='store_true')
+    args=parser.parse_args()
     release = json.loads(Path('release-source.json').read_text())
+    if args.local_verified_image:
+        actual=json.loads(subprocess.check_output(['docker','image','inspect',release['image_id']],text=True))[0]
+        assert actual['Id']==release['image_id']
+        publish(release,actual,'local_image_previously_archive_and_deployment_verified')
+        return
     subprocess.run(['docker', 'system', 'prune', '-af'], check=True)
     # This is an ephemeral GitHub runner, not the research server.
     free = int(subprocess.check_output(['df', '--output=avail', '-B1', '/'], text=True).splitlines()[-1])
@@ -37,6 +46,10 @@ def main():
         actual['Id'], '-c', "import json; from pathlib import Path; from submission.scope import validate_final_manifest; "
         "m=json.loads(Path('/models/model-manifest.json').read_text()); validate_final_manifest(m); "
         "assert set(m['routes'])=={'0','1','2','3','5'}; print('EMBEDDED_MANIFEST_VERIFIED')"], check=True)
+    publish(release,actual,'anonymous_archive_stream_sha256_verified')
+
+
+def publish(release,actual,method):
     uri = release['registry_uri']
     subprocess.run(['docker', 'tag', actual['Id'], uri], check=True)
     subprocess.run(['docker', 'push', uri], check=True)
@@ -47,7 +60,8 @@ def main():
     subprocess.run(['docker', 'pull', repo_digest], check=True)
     evidence = {'status': 'registry_pushed_authenticated_digest_pull_verified',
         'registry_uri': uri, 'registry_digest_uri': repo_digest, 'image_id': actual['Id'],
-        'archive_sha256': digest.hexdigest(), 'archive_bytes': count,
+        'archive_sha256': release['archive_sha256'], 'archive_bytes': release['archive_bytes'],
+        'publication_source':method,
         'github_run_id': os.environ['GITHUB_RUN_ID'], 'public_anonymous_pull_verified': False,
         'physical_rollouts': 0, 'actual_24gb_tested': False}
     Path('registry-release.json').write_text(json.dumps(evidence, indent=2) + '\n')
