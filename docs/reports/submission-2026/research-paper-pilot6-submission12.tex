@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \usepackage[a4paper,left=19mm,right=19mm,top=18mm,bottom=18mm]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern,microtype,graphicx,booktabs,tabularx,array,amsmath,xcolor,enumitem,titlesec,fancyhdr,caption,tcolorbox,hyperref}
+\usepackage{lmodern,microtype,graphicx,booktabs,tabularx,array,amsmath,xcolor,enumitem,titlesec,caption,tcolorbox,hyperref}
 \definecolor{ink}{HTML}{183047}
 \definecolor{teal}{HTML}{078B83}
 \definecolor{muted}{HTML}{647586}
@@ -18,24 +18,18 @@
 \titlespacing*{\subsection}{0pt}{8pt}{3pt}
 \captionsetup{hypcap=false,font=small,labelfont={bf,color=ink},skip=5pt}
 \setlist[itemize]{leftmargin=1.3em,topsep=2pt,itemsep=2pt,parsep=0pt}
-\pagestyle{fancy}\fancyhf{}
-\fancyhead[L]{\small\sffamily\color{muted}ROBOGOOMY / BEHAVIOR 2026}
-\fancyhead[R]{\small\sffamily\color{muted}Research report / 11 October 2026}
-\fancyfoot[L]{\footnotesize\sffamily\color{muted}Self-reported results. Organizer verification pending.}
-\fancyfoot[R]{\small\sffamily\color{muted}\thepage}
-\renewcommand{\headrulewidth}{0pt}
-\setlength{\headheight}{14pt}
+\pagestyle{empty}
 \newcommand{\note}[2]{\begin{tcolorbox}[colback=pale,colframe=pale,boxrule=0pt,arc=1.5mm,left=3mm,right=3mm,top=2mm,bottom=2mm]\textbf{\color{ink}#1}\quad #2\end{tcolorbox}}
 \newcommand{\framepic}[3]{\begin{minipage}[t]{#1}\includegraphics[width=\linewidth]{#2}\par\vspace{1pt}{\small\sffamily\color{ink}#3}\end{minipage}}
 \newcommand{\docpath}[1]{{\small\nolinkurl{#1}}}
 
 \begin{document}
-\thispagestyle{fancy}
-{\fontsize{24}{28}\selectfont\sffamily\bfseries\color{ink}Small Action Corrections\\for Household Robots}\par
-\vspace{4pt}
-{\large\sffamily\color{muted}A six-task development study and a twelve-rollout challenge submission}\par
-{\normalsize Leonard Yoon\quad |\quad Independent researcher\quad |\quad Team robogoomy}
+{\fontsize{20}{24}\selectfont\sffamily\bfseries\color{ink}Small Action Corrections for Household Robots}\par
 \vspace{2pt}
+{\fontsize{11.5}{15}\selectfont\sffamily\color{muted}A six-task development study and a twelve-rollout challenge submission}\par
+\vspace{2pt}
+{\fontsize{10}{13}\selectfont\sffamily Leonard Yoon\enspace |\enspace Independent researcher\enspace |\enspace Team robogoomy\hfill\color{muted}11 October 2026}\par
+\vspace{4pt}
 \begin{center}
 \framepic{.322\linewidth}{task002-public0-t300-head.png}{002 / Put away decorations}\hfill
 \framepic{.322\linewidth}{task001-public0-t184-head.png}{001 / Pick up trash}\hfill

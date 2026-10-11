@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "updated_utc": "2026-10-11T13:47:29.383975+00:00",
+  "updated_utc": "2026-10-11T13:56:15.103920+00:00",
   "revision_kind": "visual_reports_only_no_new_experiments",
   "source_repository": "https://github.com/leonyoon-3dai/behavior-submission-2026",
   "source_base_commit": "4d40b4a02f7f9042449353ac96f9574a08a909b7",
@@ -110,8 +110,8 @@
     "presentation-assets/verified-facts.json": "8517014bc6891be85de0d91ca86cdd0f30ce07284afcd146019be53e3cd69323",
     "presentation-pilot6-submission12.pdf": "136fef2479fca75b6f642b2c21496c615c59a138640deeaf28e3fbb6c52208be",
     "requirements.lock.txt": "f3471a99f86fdf2479c56d9bd0075fc4bb6927f821ec920d606f69e85a06ac78",
-    "research-paper-pilot6-submission12.pdf": "9b267d56a9f074d1fa2d7d87386af740c1cab980278be147a79509e74918c887",
-    "research-paper-pilot6-submission12.tex": "a452e6d02b49974739300322082ff138f185b76725372a28e4ab85a8b7dcdf9c",
+    "research-paper-pilot6-submission12.pdf": "7ed094b8e4bd45368c4bcfbb2cd4075dfc2f7f8c7f02308a1c2ab5a99b29bf1e",
+    "research-paper-pilot6-submission12.tex": "141077924c348f5d528e6c9bbd3f1dddc35fb6ae1ac65082c9d37d202815964c",
     "results-snapshot.json": "ed97049dd585b5aa1c548d18268279d37c60bc44fbc154117a2ce9a6a2e7e2fc",
     "submission12-status.png": "6f40fd1bb298910a5883bf840fd244e7d127a8e0a53b56f0d7f054e0b8c4e1c0"
   },
@@ -123,5 +123,14 @@
     "results/results.json": "2fc88eadbd306638fbfbab25c0e77073123f06ae14cdec47b33c962ce81d9ade",
     "docs/submission-2026/ILIA-RT-EXPO-INFERENCE-AUDIT.md": "ffa6d40d106ec9e0d24afbc306bc5db78ee9f4307a89a20c6b3ef8f7e2792932",
     "submission/model-manifest.candidate.json": "32b87771bb93be6cd48d642c55fad2ba4ad12c23715f1a22c6eb15b57918b675"
+  },
+  "latest_layout_revision": {
+    "parent_commit": "6b087c4aa945188aed229ba1328610d891ed1aef",
+    "changes": [
+      "Single-line paper title with refined sans-serif title typography",
+      "Removed all running headers, footers, and page numbers",
+      "Report date appears in the first-page title block"
+    ],
+    "scientific_content_unchanged": true
   }
 }
