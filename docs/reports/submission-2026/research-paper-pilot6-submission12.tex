@@ -1,62 +1,287 @@
-\documentclass[10pt]{article}
-\usepackage[a4paper,margin=22mm]{geometry}
-\usepackage{graphicx,booktabs,hyperref,amsmath}
-\title{Task-Specific Action Editing for Household Manipulation:\\A Six-Task Development Pilot and a Twelve-Rollout Partial Submission}
-\author{Leonard Yoon\\Independent}
-\date{Pre-submission research draft: 2026-10-11T10:57:18. Not submitted to arXiv.}
-\begin{document}\maketitle
+\documentclass[11pt]{article}
+\usepackage[a4paper,left=19mm,right=19mm,top=18mm,bottom=18mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,graphicx,booktabs,tabularx,array,amsmath,xcolor,enumitem,titlesec,fancyhdr,caption,tcolorbox,hyperref}
+\definecolor{ink}{HTML}{183047}
+\definecolor{teal}{HTML}{078B83}
+\definecolor{muted}{HTML}{647586}
+\definecolor{pale}{HTML}{EAF2F5}
+\hypersetup{colorlinks=true,urlcolor=teal,linkcolor=teal,citecolor=teal,pdftitle={Small Action Corrections for Household Robots},pdfauthor={Leonard Yoon}}
+\graphicspath{{paper-assets/}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{5pt}
+\titleformat{\section}{\Large\sffamily\bfseries\color{ink}}{\thesection}{.65em}{}
+\titleformat{\subsection}{\normalsize\sffamily\bfseries\color{ink}}{\thesubsection}{.6em}{}
+\titlespacing*{\section}{0pt}{5pt}{10pt}
+\titlespacing*{\subsection}{0pt}{8pt}{3pt}
+\captionsetup{hypcap=false,font=small,labelfont={bf,color=ink},skip=5pt}
+\setlist[itemize]{leftmargin=1.3em,topsep=2pt,itemsep=2pt,parsep=0pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\sffamily\color{muted}ROBOGOOMY / BEHAVIOR 2026}
+\fancyhead[R]{\small\sffamily\color{muted}Research report / 11 October 2026}
+\fancyfoot[L]{\footnotesize\sffamily\color{muted}Self-reported results. Organizer verification pending.}
+\fancyfoot[R]{\small\sffamily\color{muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{14pt}
+\newcommand{\note}[2]{\begin{tcolorbox}[colback=pale,colframe=pale,boxrule=0pt,arc=1.5mm,left=3mm,right=3mm,top=2mm,bottom=2mm]\textbf{\color{ink}#1}\quad #2\end{tcolorbox}}
+\newcommand{\framepic}[3]{\begin{minipage}[t]{#1}\includegraphics[width=\linewidth]{#2}\par\vspace{1pt}{\small\sffamily\color{ink}#3}\end{minipage}}
+\newcommand{\docpath}[1]{{\small\nolinkurl{#1}}}
+
+\begin{document}
+\thispagestyle{fancy}
+{\fontsize{24}{28}\selectfont\sffamily\bfseries\color{ink}Small Action Corrections\\for Household Robots}\par
+\vspace{4pt}
+{\large\sffamily\color{muted}A six-task development study and a twelve-rollout challenge submission}\par
+{\normalsize Leonard Yoon\quad |\quad Independent researcher\quad |\quad Team robogoomy}
+\vspace{2pt}
+\begin{center}
+\framepic{.322\linewidth}{task002-public0-t300-head.png}{002 / Put away decorations}\hfill
+\framepic{.322\linewidth}{task001-public0-t184-head.png}{001 / Pick up trash}\hfill
+\framepic{.322\linewidth}{task005-public1-t100-head.png}{005 / Set mousetraps}
+\captionof{figure}{\textbf{Real rollout evidence from the submitted policy.} Head-camera frames show the robot interacting with household objects. Left: public 0, 300\,s. Center: public 0, 184\,s. Right: public 1, 100\,s. Times follow the recorded simulation video; pictures alone do not establish goal completion.}
+\end{center}
+
 \begin{abstract}
-We document a paired development study of frozen released manipulation policies with task-specific action editing, together with a separate partial-submission evaluation. The development panel contains 36 physical rollouts: six tasks, three instances, and two policy conditions. Mean final goal progress falls from 0.455 to 0.329 with editing, and full success falls from 5/18 to 1/18. Task 001 improves partial progress without improving full success. The final panel fixes one edited policy per task for tasks 001, 002, and 005, with four public instances each. All twelve final trials are complete, with observed mean final Q 0.224206 and full success 0/12. Missing instances count as zero in the official partial-submission score. This report supports reproducibility and failure analysis rather than a claim of general policy improvement.
+We study whether small learned action corrections can improve a frozen household-manipulation policy. Our system retains Ilia's released BEHAVIOR policy and adds task-specific EXPO-RT auxiliary networks for candidate editing and selection. In a paired development panel of six tasks and 36 rollouts, mean final goal progress decreases from 0.455 to 0.329, with full successes decreasing from 5/18 to 1/18. A separate, frozen-policy challenge panel completes 12 rollouts across three tasks, achieving mean final goal progress 0.224206 and no full successes. We present the implementation, original visual evidence, and reproducibility record. The evidence documents a completed submission and a negative aggregate result, rather than a general improvement claim.
 \end{abstract}
-\section{Scope and evidence}
-BEHAVIOR-1K provides realistic household activity simulation and goal-based evaluation~\cite{behavior}. The primary evidence here is the recorded paired pilot, not a new benchmark-wide result. Development instances are native 301 (public index 0) and training instances 23 and 24. These instances were used during development and must not be represented as an untouched held-out test. The supplementary final panel is a time-constrained partial submission. The user-approved execution order is 002, 001, 005; no further research rollouts are planned after its twelve trials.
-\section{Method and controls}
-We use a released task-specific policy implementation~\cite{ilia}. The original actor is frozen. Task-specific auxiliary networks were trained using 20 demonstrations, 1,000 updates, batch size eight, and discount 0.999. Each condition uses seed zero for the reported panel. The action-editing configuration uses a 30-step chunk, 15 executed steps per replan, carry length four, two original proposals and one edited proposal, one edit step, and edit scale 0.01. The original wrapper retains stage voting (three predictions, two votes to promote), cross-layer KV transforms, correlated sampling, and correction rules. The online candidate path uses the encoder, edit actor, and target critic; filter critic and temperature are training components, not directly invoked for online selection. The approach is informed by action-editing and real-time policy work~\cite{expo,rt}; these citations do not establish equivalence to their full algorithms or training claims.
-The paired panel reuses preserved historical baseline rollouts where recorded. It is not a prospectively randomized experiment. Capture alignment and environment/inference seeds are documented in the physical-row evidence. Different tasks use different released actors and auxiliary networks, so aggregate scores do not isolate a single universal editing effect.
-\section{Paired development results}
-\begin{table}[h]\centering\begin{tabular}{lrrrrr}\toprule
-Task & A0 Q & RT Q & Delta Q & A0 success & RT success\\\midrule
-000 & 0.667 & 0.333 & -0.333 & 2/3 & 1/3 \\
-001 & 0.444 & 0.667 & +0.222 & 1/3 & 0/3 \\
-002 & 0.238 & 0.143 & -0.095 & 0/3 & 0/3 \\
-003 & 0.381 & 0.333 & -0.048 & 1/3 & 0/3 \\
-005 & 0.444 & 0.444 & +0.000 & 1/3 & 0/3 \\
-007 & 0.556 & 0.056 & -0.500 & 0/3 & 0/3 \\
-\bottomrule\end{tabular}\caption{Three development instances per task and condition. Q is official final goal progress, not full task success.}\end{table}
-\begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{pilot6-Q.png}\caption{Mean final Q in the six-task paired pilot.}\end{figure}
-Across 18 pairs, final Q averages 0.455 for the original actor and 0.329 for editing. Only task 001 shows a positive task-level mean Q difference (+0.222). Task 005 has approximately zero change, while task 007 decreases by 0.500. Full success decreases from five to one. Thus this configuration does not support an overall performance-improvement claim. Increasing partial progress can coexist with lower full success. Maximum intermediate Q is not interchangeable with final Q; ending predicates and retained goal satisfaction require separate video and metric inspection.
-\section{Final partial-submission protocol}
-The final panel contains public indices 0--3 once each for tasks 001, 002, and 005, totaling twelve trials. Native instance identifiers are 301--304. All started trials, including failures, must be retained. There is no selection of favorable repeats. Public-index-zero development exposure is disclosed; this report does not claim explicit organizer approval beyond the published protocol.
-The final policy remains frozen and has five supported routes (000, 001, 002, 003, 005); the evaluated subset is three routes. Preserving unevaluated routes avoids changing the executed policy identity. The execution manifest SHA256 is \texttt{f95003a2bdb8ce6f...} (full digest in the execution manifest).
-\begin{table}[h]\centering\begin{tabular}{llll}\toprule Task & Public index & Snapshot state & Final Q\\\midrule
-002 & 0 & complete & 0.571 \\
-002 & 1 & complete & 0.714 \\
-002 & 2 & complete & 0.571 \\
-002 & 3 & complete & 0.000 \\
-001 & 0 & complete & 0.000 \\
-001 & 1 & complete & 0.000 \\
-001 & 2 & complete & 0.000 \\
-001 & 3 & complete & 0.000 \\
-005 & 0 & complete & 0.000 \\
-005 & 1 & complete & 0.500 \\
-005 & 2 & complete & 0.000 \\
-005 & 3 & complete & 0.333 \\
-\bottomrule\end{tabular}\caption{Final-panel status at 2026-10-11T10:57:18 UTC. All twelve reported trials are complete; none has full success.}\end{table}
-\section{Runtime and reproducibility}
-The clean server has four NVIDIA L40S GPUs and 46 logical CPUs. Each GPU runs a policy and simulator. Simulator CPU quotas changed from seven to ten to 10.5 without restarting active task-002 trials; later public 0/2 changed to 11 then 12, and remaining public 0/1/2 to 15 after public 3 completed. Policy quota is four. These are shared cgroup ceilings, not exclusive core reservations. Per-trial quota-change records preserve this intervention. Timing comparisons must separate steady-state rollout throughput from startup, restoration, packaging, and backup.
-The pilot used a 224-pixel RGB DefaultWrapper. The final evaluator uses RGBDFullResWrapper and the unchanged R1Pro robot configuration. Input and runtime differences prevent direct attribution of pilot-to-final speed changes to hardware alone. The policy subsequently resizes RGB and does not use depth, while wrapper and simulator overhead still remain. The pinned evaluator revision is \texttt{bd049de3119acdcdf2334fe9e1ebe060fa20c108}.
-L40S memory use is not evidence that the release runs on the official single-24GB-GPU setup. The user explicitly elected to skip actual 24GB hardware validation, based on approximately 20GB observed GPU usage; no additional GPU rental is planned. The embedded five-route release passed a current-L40S policy-only check with seeded reset and route switching; peak memory was 7317 MiB. Synthetic observations verify deployment, not behavior success. The image archive was uploaded and fully redownloaded at a pinned public HF revision with SHA256 verification. Registry and portal receipts are tracked separately. No additional research experiments are authorized after the twelve-trial panel.
-\begin{figure}[h]\centering\includegraphics[width=.88\linewidth]{policy-pipeline.png}\caption{Online path: frozen actor, task-specific candidate editing, critic selection, and retained wrapper behavior.}\end{figure}
-\section{Scoring and limitations}
-Official partial submissions count missing instances as zero. If $q_i$ denotes each of the twelve final Q scores, the panel mean is $\sum_iq_i/12$, the selected three-task score with all ten public instances is $\sum_iq_i/30$, and the full 100-task denominator is $\sum_iq_i/1000$. For the completed panel, these values are 0.22420635, 0.08968254, and 0.00269048, respectively. Full success is0/12. The observed-panel mean must not be presented as the 1000-instance leaderboard score.
-The sample is small, tasks and final scope were selected during development, simulation is nondeterministic, and there is no matched final A0 control. No significance, generalization, or benchmark leadership claim follows from this evidence. Video analysis should distinguish navigation, grasp acquisition, manipulation, placement, and goal retention while linking each observation to its original artifacts.
-\section{Artifact organization and follow-up}
-The main repository presents the six-task pilot, final twelve-trial status, and submission instructions. The preparation branch preserves restoration, historical scope changes, and prior experimental procedures. Submission notes remain on main until the user explicitly requests their relocation after submission. GitHub branch privacy follows repository privacy.
-Private Hugging Face research and public submission catalogs separate use cases. Large historical archives remain in their original private repository with pinned revisions and SHA256 receipts. The public submission catalog contains the completed unchanged metrics, videos, release image archive, final ZIP, and reports; simulator assets, decryption keys, and credentials are excluded. Metadata audits compare archive LFS SHA256 and download the small manifest, distinct from a new full archive redownload. The final portal requires organizer-accessible assets, not merely private owner-readable URLs.
-The next analysis uses preserved videos, metrics, and inference logs rather than additional research rollouts. Intermediate official goal traces were not captured. The author and affiliation were confirmed by the participant; arXiv publication has not been performed.
-\begin{thebibliography}{9}
-\bibitem{behavior} Chengshu Li et al.. BEHAVIOR-1K: A Human-Centered, Embodied AI Benchmark with 1,000 Everyday Activities and Realistic Simulation. 2024. \url{https://arxiv.org/abs/2403.09227}.
-\bibitem{expo} Perry Dong, Kuo-Han Hung, Tian Gao, Dorsa Sadigh, and Chelsea Finn. EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models. 2026. \url{https://arxiv.org/abs/2605.25477v2}.
-\bibitem{rt} Perry Dong, Kuo-Han Hung, Dorsa Sadigh, and Chelsea Finn. Reinforcement Learning for Real-Time Vision-Language-Action Policies. 2026. \url{https://arxiv.org/abs/2609.18207v1}.
-\bibitem{ilia} Ilia Larchenko. BEHAVIOR-1K solution: released implementation. 2025. \url{https://github.com/IliaLarchenko/behavior-1k-solution/tree/ca556f74a455cef7987a2be4537b5ac85cc56dd7}.
-\end{thebibliography}\end{document}
+
+\section{Study question and contribution}
+Household tasks require sequences of navigation, grasping, transport, and placement. A plausible action at one moment may still fail to complete the overall task. We test a modest intervention: preserve an existing manipulation policy, then learn small corrections and select among its proposed actions.
+
+This report contributes a transparent \textbf{implementation and evaluation record}: a paired pilot, a separate partial challenge submission, and a visual failure review. All twelve final rollouts, including failures, are retained. The submission was accepted by the portal on October 11, 2026; organizer performance verification remains pending. This manuscript has not been submitted to arXiv.
+\note{Reading the results}{Q in our result figures is official final goal progress. It is different from the learned critic's internal score. Partial progress is also different from complete task success.}
+
+\newpage
+\section{Method: propose, refine, choose}
+We use Ilia's released 2025 implementation~\cite{ilia} as the base policy. Its weights remain frozen. Per-task auxiliary networks follow an EXPO-inspired editing and real-time inference path~\cite{expo,rt}. We describe the executed implementation; we do not claim to reproduce every setting or result of those papers.
+
+\begin{center}
+\includegraphics[width=\linewidth]{method-overview.pdf}
+\captionof{figure}{\textbf{Online policy overview.} The original policy proposes two action sequences. A learned residual produces one additional candidate. Twin target critics score the three candidates, and the retained Ilia wrapper postprocesses the selected sequence before execution. A four-action carry prefix conditions the next asynchronous inference.}
+\end{center}
+
+\subsection{What changes, and what stays fixed}
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}p{.25\linewidth}X@{}}\toprule
+\textbf{Frozen base} & Ilia visual backbone, action expert, task embeddings, stage predictor, cross-layer key/value transforms, and correlated sampling.\\
+\textbf{Learned additions} & Task-specific edit actor, image encoder, critic, target critic, and training-only auxiliary components.\\
+\textbf{Retained execution} & Stage voting and correction rules. Rules can modify a selected chunk; stage voting is separate from action selection.\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+\subsection{A small, explicit candidate set}
+Two native 30-step chunks provide the base proposals. A single edit step with normalized scale 0.01 creates one residual alternative from the first proposal. For each candidate $a$, the online path evaluates two target critics and selects
+\[
+ a^*=\arg\max_{a\in\{a_1,a_2,\widetilde a_1\}}\min\bigl(\widehat Q_1(s,a),\widehat Q_2(s,a)\bigr).
+\]
+This is selection, not averaging. The learned scores $\widehat Q$ differ from official goal progress. The wrapper executes 15 actions and retains four carry actions. RT action compression is disabled.
+
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}lXlX@{}}\toprule
+Batch size & 8 & Discount & 0.999\\
+Chunk / execution & 30 / 15 steps & Carry prefix & 4 steps\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+\note{Implementation boundary}{The filter critic and temperature affect training but are not directly called by the current fast online selection path. The submitted actor is the original released A0, not the separately adapted historical F1 actor.}
+
+\newpage
+\section{Development pilot: no aggregate improvement}
+The pilot contains six tasks, three development instances per task, and two conditions: original Ilia (A0) and Ilia with RT editing. The 36 simulated rollouts form 18 matched task-instance pairs. Development instances are native 301 (public index 0) and training instances 23 and 24; this is not an untouched held-out benchmark.
+
+\begin{center}
+\includegraphics[width=\linewidth]{pilot-results.pdf}
+\captionof{figure}{\textbf{Paired development results.} Each bar averages three rollouts. Task 001 improves partial progress, but the aggregate result worsens. Scores are final goal progress, not the maximum intermediate progress observed during an episode.}
+\end{center}
+
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}Xrrr@{}}\toprule
+\textbf{Pilot aggregate} & \textbf{Original A0} & \textbf{With RT} & \textbf{Change}\\\midrule
+Mean final goal progress & 0.455 & 0.329 & $-0.126$\\
+Fully completed trials & 5/18 & 1/18 & $-4$ trials\\
+Task means with higher Q & --- & 1/6 & Task 001 only\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+\subsection{What this experiment establishes}
+This configuration does \textbf{not} support an overall improvement claim. Task 001 raises mean Q from 0.444 to 0.667 while full successes fall from 1/3 to 0/3. Task 005 has unchanged mean Q, also with fewer full successes. Increasing some satisfied goals is therefore insufficient evidence of reliable task completion.
+
+\subsection{What it does not isolate}
+The panel reuses preserved baseline rollouts where documented; it is not a prospectively randomized study. Different tasks use different actors and auxiliary parameters. The RT path also changes chunk scheduling and disables the original compression. Consequently, the A0--RT comparison measures the complete configured system, rather than an isolated residual-editing effect.
+
+\note{Practical lesson}{A successful grasp or a higher predicted value is an intermediate event. Evaluation must check whether all required goals remain satisfied at the episode end.}
+
+\newpage
+\section{Final submission: twelve completed trials}
+The final panel freezes one RT policy per task and runs tasks 002, 001, and 005 on public indices 0--3 once each. Native instance IDs are 301--304. All started final trials are retained, with no favorable-repeat selection. This panel uses RT only; it has \textbf{no matched final A0 control}.
+
+\begin{center}
+\includegraphics[width=\linewidth]{final-results.pdf}
+\captionof{figure}{\textbf{All twelve final results.} Each cell is one complete rollout, with final Q in $[0,1]$. All twelve have full-task success equal to false. The differences between tasks and instances are observed outcomes, not estimates of the causal effect of RT.}
+\end{center}
+
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}Xrrr@{}}\toprule
+\textbf{Task} & \textbf{Mean Q} & \textbf{Full success} & \textbf{Steps / trial}\\\midrule
+002 / Put away Halloween decorations & 0.4643 & 0/4 & 20,683\\
+001 / Pick up trash & 0.0000 & 0/4 & 7,902\\
+005 / Set mousetraps & 0.2083 & 0/4 & 15,295\\\midrule
+Observed 12-rollout panel & 0.224206 & 0/12 & ---\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+\subsection{Three denominators, three different scores}
+Let $S=\sum_{i=1}^{12}q_i$ be the sum of reported final Q values. Missing challenge instances count as zero~\cite{evaluation,updates}.
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}Xrl@{}}\toprule
+\textbf{Scope} & \textbf{Score} & \textbf{Meaning}\\\midrule
+12 observed trials & $S/12=0.22420635$ & Mean of the runs performed\\
+3 tasks $\times$ 10 public instances & $S/30=0.08968254$ & Includes 18 missing zeros\\
+100 tasks $\times$ 10 public instances & $S/1000=0.00269048$ & Full challenge denominator\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+The 12-rollout mean must not be presented as the 1,000-instance leaderboard score. These are self-reported calculations; portal acceptance does not constitute organizer verification.
+
+\subsection{Protocol differences matter}
+The pilot used a 224-pixel RGB DefaultWrapper. The final panel uses RGBDFullResWrapper with the unchanged R1Pro robot configuration; the policy subsequently resizes RGB and does not consume depth. Public index 0 had development exposure. Different wrappers, instance sets, and runtime conditions prevent treating pilot-to-final differences as a controlled improvement or regression experiment.
+\note{Recorded outcome}{Some final trials make partial progress, but none completes its full goal. We report this outcome without a significance or generalization claim.}
+
+\newpage
+\section{Rollout evidence: handling is not completion}
+Task 001 requires three cans to satisfy the relation \texttt{inside(can, ashcan)}. Grasping a can is not itself a goal predicate. The four final trials all end at Q $=0$, despite visible object handling.
+
+\begin{center}
+\framepic{.485\linewidth}{task001-public0-t060-full.png}{(a) 60 s / Moving through the room}\hfill
+\framepic{.485\linewidth}{task001-public0-t132-full.png}{(b) 132 s / Trash can near the right hand}
+\vspace{7pt}
+\framepic{.485\linewidth}{task001-public0-t184-full.png}{(c) 184 s / Can visible in the left wrist view}\hfill
+\framepic{.485\linewidth}{task001-public0-t237-full.png}{(d) 237 s / Similar late holding posture}
+\captionof{figure}{\textbf{Task 001, public instance 0.} Original three-camera mosaics: left/right wrist views on the left, head view on the right. The repeated later poses motivate an insertion and recovery investigation. These frames cannot determine exact grasp attachments, collisions, or intermediate predicate values. Times are simulation-video time, not wall-clock duration.}
+\end{center}
+
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}p{.24\linewidth}X@{}}\toprule
+\textbf{Measured} & All four task-001 runs complete 7,902 steps and 527 inference intervals; all final Q values are zero.\\
+\textbf{Visible} & Objects recur close to both hands. The later sampled views contain similar poses and a tilted trash can.\\
+\textbf{Hypothesis} & Insertion, coordinated holding, and recovery may be bottlenecks. The available evidence does not identify one causal component.\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+The edited candidate is selected in approximately 25.0--27.1\% of task-001 decisions. That statistic does not show whether selection helped: alternative physical outcomes were not executed and logged. Grasp-constraint warnings appear in the simulator logs, but also occur in runs with partial progress, so the warning alone does not prove a simulator fault.
+
+\note{Evidence limit}{Final Q $=0$ does not mean Q remained zero throughout the trajectory. Complete intermediate goal traces and action/object-state trajectories were not captured in the final panel.}
+
+\newpage
+\section{Partial progress, deployment, and next questions}
+\begin{center}
+\framepic{.238\linewidth}{task002-public0-t050-head.png}{002 / 50 s}\hfill
+\framepic{.238\linewidth}{task002-public0-t500-head.png}{002 / 500 s}\hfill
+\framepic{.238\linewidth}{task005-public1-last-head.png}{005 / public 1 / final}\hfill
+\framepic{.238\linewidth}{task005-public3-last-head.png}{005 / public 3 / final}
+\captionof{figure}{\textbf{Additional recorded outcomes.} Task 002 public 0 moves between household locations and ends at Q $=0.5714$. Task 005 public 1 and public 3 end at Q $=0.5000$ and $0.3333$. Scores come from the original result JSON files, not visual inference. Final frames are at approximately 509.8\,s of simulation-video time.}
+\end{center}
+
+\subsection{A completed release, with bounded deployment evidence}
+The final evaluation ran on a clean server with four L40S GPUs. Each GPU hosted a policy and simulator. Simulator CPU ceilings changed during evaluation and are documented in the execution record; they were not exclusive core reservations. Hardware and scheduling differences therefore cannot be used as a controlled speed benchmark.
+
+The frozen Docker release embeds the weights and supports five routes: 000, 001, 002, 003, and 005. Only three routes were evaluated in the final panel. Checkpoint 1 serves 002/003/005 and checkpoint 2 serves 000/001; task 007 remains pilot-only. A policy-only L40S check passed route switching and seeded reset checks, with 7,317\,MiB peak GPU memory. Synthetic inputs verify deployment behavior, not household-task success. Actual 24\,GB hardware was not tested.
+
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}p{.26\linewidth}X@{}}\toprule
+\textbf{Preserved evidence} & Unchanged rollout JSON, original videos, frozen model manifest, image digest, and checksums.\\
+\textbf{Reproduction entry} & Repository evaluation guide; separate simulator and policy containers. Embedded weights require no Hugging Face token.\\
+\textbf{Submission status} & Portal accepted October 11, 2026. Organizer verification pending.\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+\subsection{Priorities for a subsequent study}
+\textbf{First, observe the missing transitions.} Record synchronized goal predicates, stage predictions, gripper commands, and correction-rule triggers. This separates object reached from object placed and identifies where execution stalls.
+
+\textbf{Second, isolate the interventions.} Compare A0, A0 with candidate scoring, and A0 with scoring plus editing under matched wrappers, instances, seeds, and time budgets. A separate comparison is needed for actor fine-tuning (F1).
+
+\textbf{Third, target recovery evidence.} Use the identified insertion and stall cases to choose recovery demonstrations or bounded recovery rules. These are future experiments, not implemented features or established improvements.
+\note{Conclusion}{The work delivers a reproducible challenge entry and actionable failure evidence. The tested RT configuration does not yet improve overall task completion.}
+
+\newpage
+\appendix
+\section{BEHAVIOR data and the simulated robot}
+\subsection{Benchmark, challenge, and this experiment}
+BEHAVIOR-1K covers 1,000 everyday activities in realistic interactive simulation~\cite{behavior}. The 2026 challenge is a defined subset, with 100 tasks and 20,000 released demonstrations~\cite{dataset2026}. These dataset totals should not be confused with the much smaller adaptation and evaluation budgets in this report.
+
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}p{.27\linewidth}X@{}}\toprule
+\textbf{2026 dataset} & 100 tasks; 20,000 human demonstrations. HDF5 supports exact replay; LeRobot v3 organizes learning data.\\
+\textbf{This adaptation} & 20 demonstration episodes per task; 1,000 auxiliary-network updates. The released Ilia actor stays frozen.\\
+\textbf{Development evaluation} & 6 tasks, 3 instances, 2 conditions: 36 rollouts.\\
+\textbf{Final evaluation} & 3 tasks, 4 public instances, 1 frozen condition: 12 rollouts.\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+\subsection{R1Pro: a mobile, two-arm household robot}
+\begin{minipage}[t]{.37\linewidth}
+\vspace{0pt}\includegraphics[width=\linewidth,trim=80 55 60 70,clip]{r1pro-official.png}
+\par{\footnotesize\color{muted}Official OmniGibson R1Pro illustration~\cite{robot}. Cropped white margins only.}
+\end{minipage}\hfill
+\begin{minipage}[t]{.59\linewidth}
+\vspace{0pt}
+The simulated R1Pro combines a mobile base, articulated torso, two arms, and two-finger grippers. It observes the scene through a head camera and one camera on each wrist~\cite{robot}.
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Base & 3 commanded motion dimensions\\
+Torso & 4 joint commands\\
+Arms & 7 joint commands per arm\\
+Grippers & 1 command per hand\\\midrule
+Total action & 23 command dimensions\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+The two physical fingers of each gripper do not imply two independent action commands. The submitted robot configuration uses joint-position arm control, velocity control for the holonomic base, and assisted grasping.
+\end{minipage}
+
+\subsection{How a task becomes a score}
+Task definitions specify object relationships and states in BDDL. For example, trash picking requires each target can to be inside the trash can. The evaluator reports the fraction of required goals satisfied at the end and a separate full-success indicator~\cite{evaluation}. Camera appearance, motion distance, and predicted critic value do not replace these task predicates.
+
+\newpage
+\section{Data representation and coordinate boundaries}
+\begin{center}
+\includegraphics[width=\linewidth]{representation-overview.pdf}
+\captionof{figure}{\textbf{Representation boundaries.} The demonstration schema, native actor representation, critic coordinates, and robot commands are different interfaces. Their explicit conversion is part of the method; a padded model dimension is not a robot degree of freedom.}
+\end{center}
+
+\subsection{Dataset and evaluator observations}
+The official LeRobot metadata describes 30\,Hz episodes with three RGB streams, depth streams, a 61-dimensional state, and a 23-dimensional action~\cite{datasetschema}. The final policy consumes RGB, proprioception, and task identity. Depth is available in the evaluator wrapper but unused by this policy.
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}p{.29\linewidth}X@{}}\toprule
+RGB images & Head: $720\!\times\!720$; each wrist: $480\!\times\!480$ in the official schema. The policy resizes images internally.\\
+Robot state & 61 floats: base velocity (3), arm positions/velocities (28), end-effector poses (14), gripper positions/velocities (8), torso positions/velocities (8).\\
+Physical action & 23 floats: base (3), torso (4), left arm (7), left gripper (1), right arm (7), right gripper (1).\\
+Dataset organization & \texttt{annotations/}, \texttt{data/}, \texttt{meta/}, and \texttt{videos/}; episode metadata connects the streams.\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+\subsection{Inside the submitted model}
+The adapter reduces the 61-dimensional observation to a 23-dimensional control state: base velocity, torso positions, both arm positions, and one summed finger-position value per gripper. Nine zeros pad this vector to the native 32-dimensional model input. The native actor predicts a $30\!\times\!32$ action chunk; only 23 physical dimensions are commanded.
+
+Native Ilia actions use their own normalization, delta conventions, and time-dependent statistics. The critic/editor uses a separate documented coordinate system. Conversion passes through physical targets, applies the appropriate anchor, and then maps to the critic frame. Selected actions are decoded back before execution. Copying a normalized vector directly across these interfaces would not preserve its physical meaning.
+
+\newpage
+\section{Evidence, provenance, and references}
+\subsection{Artifacts supporting this report}
+The public repository is the entry point for the frozen policy, result files, and rollout index:\\
+\url{https://github.com/leonyoon-3dai/behavior-submission-2026}
+
+\par\vspace{2pt}
+\begin{tabularx}{\linewidth}{@{}p{.28\linewidth}X@{}}\toprule
+Final numerical results & \docpath{results/results.csv}; all 12 native JSON result files are retained.\\
+Pilot numerical results & \docpath{docs/reports/submission-2026/results-snapshot.json}; the pilot portion preserves 36 physical rows. Its historical portal flag is not the current submission status.\\
+Execution audit & \docpath{docs/submission-2026/ILIA-RT-EXPO-INFERENCE-AUDIT.md}\\
+Original videos & \docpath{VIDEOS.md}; linked recordings and SHA256 checksums.\\
+Figure provenance & \docpath{paper-assets/provenance.json}; source video URL, SHA256, frame time, and crop for each evidence image.\\
+Rebuildable figures & \docpath{paper-assets/build_figures.py}; charts use recorded values, not estimated curves.\\
+\bottomrule\end{tabularx}\par\vspace{2pt}
+
+All rollout images are extracted from the original final-panel videos; only documented camera crops and layout are used. We do not use generated imagery as experimental evidence. The official robot illustration is credited separately. Final-panel JSON and videos are unchanged by this presentation revision.
+
+\begingroup\small\setlength{\parskip}{2pt}
+\begin{thebibliography}{9}\raggedright
+\bibitem{behavior} Chengshu Li et al. \emph{BEHAVIOR-1K: A Human-Centered, Embodied AI Benchmark with 1,000 Everyday Activities and Realistic Simulation.} 2024. \url{https://arxiv.org/abs/2403.09227}.
+\bibitem{ilia} Ilia Larchenko. \emph{BEHAVIOR-1K solution: released implementation.} 2025. Commit \texttt{ca556f74a455cef7987a2be4537b5ac85cc56dd7}. \url{https://github.com/IliaLarchenko/behavior-1k-solution}.
+\bibitem{expo} Perry Dong, Kuo-Han Hung, Tian Gao, Dorsa Sadigh, and Chelsea Finn. \emph{EXPO-FT: Sample-Efficient Reinforcement Learning Finetuning for Vision-Language-Action Models.} 2026. \url{https://arxiv.org/abs/2605.25477v2}.
+\bibitem{rt} Perry Dong, Kuo-Han Hung, Dorsa Sadigh, and Chelsea Finn. \emph{Reinforcement Learning for Real-Time Vision-Language-Action Policies.} 2026. \url{https://arxiv.org/abs/2609.18207v1}.
+\bibitem{dataset2026} Stanford Vision and Learning Lab. \emph{2026 BEHAVIOR Challenge: Dataset.} Accessed October 11, 2026. \url{https://behavior.stanford.edu/challenge/dataset.html}.
+\bibitem{datasetschema} BEHAVIOR-1K. \emph{2026 Challenge Demonstrations: LeRobot v3 Metadata Schema.} Accessed October 11, 2026. \url{https://huggingface.co/datasets/behavior-1k/2026-challenge-demos/blob/main/meta/info.json}.
+\bibitem{robot} Stanford Vision and Learning Lab. \emph{OmniGibson Robots: R1 Pro.} Accessed October 11, 2026. \url{https://behavior.stanford.edu/omnigibson/robots.html}. Illustration: \url{https://behavior.stanford.edu/assets/robots/R1Pro.png}.
+\bibitem{evaluation} Stanford Vision and Learning Lab. \emph{2026 BEHAVIOR Challenge: Evaluation.} Accessed October 11, 2026. \url{https://behavior.stanford.edu/challenge/evaluation.html}.
+\bibitem{updates} Stanford Vision and Learning Lab. \emph{2026 BEHAVIOR Challenge: Updates.} Accessed October 11, 2026. \url{https://behavior.stanford.edu/challenge/updates.html}.
+\end{thebibliography}\endgroup
+\end{document}

@@ -1,0 +1,167 @@
+{
+  "provenance": {
+    "pilot": "docs/reports/submission-2026/results-snapshot.json",
+    "final": "results/results.json",
+    "status": "README.md",
+    "method": "docs/submission-2026/ILIA-RT-EXPO-INFERENCE-AUDIT.md",
+    "task_names": "submission/model-manifest.candidate.json"
+  },
+  "pilot": [
+    {
+      "task_id": 0,
+      "task_name": "turning_on_radio",
+      "A0_mean_Q": 0.6666666666666666,
+      "RT_mean_Q": 0.3333333333333333,
+      "A0_successes": 2,
+      "RT_successes": 1,
+      "rollouts_per_condition": 3
+    },
+    {
+      "task_id": 1,
+      "task_name": "picking_up_trash",
+      "A0_mean_Q": 0.4444444444444444,
+      "RT_mean_Q": 0.6666666666666666,
+      "A0_successes": 1,
+      "RT_successes": 0,
+      "rollouts_per_condition": 3
+    },
+    {
+      "task_id": 2,
+      "task_name": "putting_away_Halloween_decorations",
+      "A0_mean_Q": 0.23809523809523808,
+      "RT_mean_Q": 0.14285714285714285,
+      "A0_successes": 0,
+      "RT_successes": 0,
+      "rollouts_per_condition": 3
+    },
+    {
+      "task_id": 3,
+      "task_name": "cleaning_up_plates_and_food",
+      "A0_mean_Q": 0.38095238095238093,
+      "RT_mean_Q": 0.3333333333333333,
+      "A0_successes": 1,
+      "RT_successes": 0,
+      "rollouts_per_condition": 3
+    },
+    {
+      "task_id": 5,
+      "task_name": "setting_mousetraps",
+      "A0_mean_Q": 0.4444444444444444,
+      "RT_mean_Q": 0.4444444444444444,
+      "A0_successes": 1,
+      "RT_successes": 0,
+      "rollouts_per_condition": 3
+    },
+    {
+      "task_id": 7,
+      "task_name": "picking_up_toys",
+      "A0_mean_Q": 0.5555555555555556,
+      "RT_mean_Q": 0.05555555555555555,
+      "A0_successes": 0,
+      "RT_successes": 0,
+      "rollouts_per_condition": 3
+    }
+  ],
+  "pilot_totals": {
+    "rollouts": 36,
+    "paired_trials": 18,
+    "A0_mean_Q": 0.455026455026455,
+    "RT_mean_Q": 0.32936507936507936,
+    "A0_successes": 5,
+    "RT_successes": 1
+  },
+  "final": [
+    {
+      "task_id": 2,
+      "task_name": "putting_away_Halloween_decorations",
+      "public_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "Q_by_instance": [
+        0.5714285714285714,
+        0.7142857142857143,
+        0.5714285714285714,
+        0.0
+      ],
+      "mean_Q": 0.4642857142857143,
+      "successes": 0,
+      "n": 4
+    },
+    {
+      "task_id": 1,
+      "task_name": "picking_up_trash",
+      "public_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "Q_by_instance": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean_Q": 0.0,
+      "successes": 0,
+      "n": 4
+    },
+    {
+      "task_id": 5,
+      "task_name": "setting_mousetraps",
+      "public_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "Q_by_instance": [
+        0.0,
+        0.5,
+        0.0,
+        0.3333333333333333
+      ],
+      "mean_Q": 0.20833333333333331,
+      "successes": 0,
+      "n": 4
+    }
+  ],
+  "final_totals": {
+    "rollouts": 12,
+    "successes": 0,
+    "mean_Q": 0.2242063492063492,
+    "full_challenge_Q": 0.00269047619047619
+  },
+  "status": {
+    "submitted_date": "2026-10-11",
+    "portal_accepted": true,
+    "organizer_verified": false,
+    "submission_id": "20261011T111517Z-robogoomy-ilia-expo-rt",
+    "warning": "Older results-snapshot.json portal_submitted=false is stale relative to README."
+  },
+  "method": {
+    "actor": "Frozen original Ilia checkpoint 1/2; no final actor finetuning",
+    "training": "Each task: 20 official demonstrations, 1000 auxiliary updates, batch8",
+    "candidates": "Two base candidates + one edited alternative; select highest minimum-of-twin-target-critic value",
+    "execution": "Retain Ilia stage voting and correction rules; their postprocessing can overwrite selected action",
+    "goal_Q": "Fraction of task goal conditions met at episode end; not learned critic value"
+  },
+  "safe_takeaways": [
+    "A working, reproducible evaluation pipeline and completed submission; no overall performance improvement demonstrated.",
+    "Handling an object does not complete its placement goal.",
+    "Partial goal progress can coexist with zero complete task successes.",
+    "Final RT-only runs do not isolate whether RT caused a failure.",
+    "Pilot and final protocols differ; do not present them as a controlled before-and-after test.",
+    "Stage tracking, placement, and recovery are priorities for future tests, not established fixes."
+  ],
+  "limitations": [
+    "Only12/1000 challenge instances evaluated; missing results count zero.",
+    "Public index0 had development exposure.",
+    "No statistical significance claim from3pilotrollouts/condition.",
+    "Actual24GBhardware not tested; L40S deployment only.",
+    "Failure mechanisms remain hypotheses; sampled videos do not reconstruct exact physical state."
+  ]
+}

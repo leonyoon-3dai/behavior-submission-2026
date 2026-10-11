@@ -1,17 +1,127 @@
 {
-  "updated_utc": "2026-10-11T10:57:18.780635+00:00",
+  "schema_version": 2,
+  "updated_utc": "2026-10-11T13:47:29.383975+00:00",
+  "revision_kind": "visual_reports_only_no_new_experiments",
+  "source_repository": "https://github.com/leonyoon-3dai/behavior-submission-2026",
+  "source_base_commit": "4d40b4a02f7f9042449353ac96f9574a08a909b7",
+  "original_report_updated_utc": "2026-10-11T10:57:18.780635+00:00",
+  "original_builder_sha256": "88c0bdfb816d8ffece77a7409c1642cdc1d48a2eb86540a9fea6a17493db63fc",
   "completed_submission_rollouts": 12,
+  "development_pilot_rollouts": 36,
   "authors_confirmed": true,
   "arxiv_submitted": false,
-  "builder_sha256": "88c0bdfb816d8ffece77a7409c1642cdc1d48a2eb86540a9fea6a17493db63fc",
+  "challenge_submission": {
+    "submission_id": "20261011T111517Z-robogoomy-ilia-expo-rt",
+    "submitted_date": "2026-10-11",
+    "portal_accepted": true,
+    "organizer_verified": false,
+    "status_source": "README.md at source_base_commit"
+  },
+  "preserved_snapshot": {
+    "path": "results-snapshot.json",
+    "sha256": "ed97049dd585b5aa1c548d18268279d37c60bc44fbc154117a2ce9a6a2e7e2fc",
+    "unchanged_from_source_base_commit": true,
+    "status_note": "The original snapshot retains its earlier pre-submission status. Current challenge status is tracked separately; no experimental records were overwritten."
+  },
+  "path_convention": {
+    "files_sha256": "relative to this manifest directory",
+    "build_sources_sha256": "relative to repository root",
+    "external_inputs_sha256": "relative to repository root"
+  },
+  "artifacts": {
+    "presentation-pilot6-submission12.pdf": {
+      "pages": 12,
+      "source": "../../../scripts/build_visual_presentation.py",
+      "assets": "presentation-assets/",
+      "provenance": "presentation-assets/rollout-source-provenance.json",
+      "facts": "presentation-assets/verified-facts.json",
+      "build_commands_from_repository_root": [
+        "python scripts/build_visual_presentation.py"
+      ],
+      "dependencies": [
+        "Python",
+        "ReportLab",
+        "Pillow",
+        "DejaVu Sans fonts"
+      ]
+    },
+    "research-paper-pilot6-submission12.pdf": {
+      "pages": 9,
+      "source": "research-paper-pilot6-submission12.tex",
+      "figure_builder": "paper-assets/build_figures.py",
+      "assets": "paper-assets/",
+      "provenance": "paper-assets/provenance.json",
+      "build_commands_from_repository_root": [
+        "python docs/reports/submission-2026/paper-assets/build_figures.py",
+        "cd docs/reports/submission-2026",
+        "pdflatex -interaction=nonstopmode -halt-on-error research-paper-pilot6-submission12.tex",
+        "pdflatex -interaction=nonstopmode -halt-on-error research-paper-pilot6-submission12.tex"
+      ],
+      "dependencies": [
+        "Python",
+        "Matplotlib",
+        "NumPy",
+        "Pillow",
+        "pdfLaTeX",
+        "LaTeX packages declared in manuscript source"
+      ]
+    }
+  },
+  "original_python_dependency_lock": "requirements.lock.txt",
+  "rebuild_note": "Hashes identify this published revision. PDF metadata and tool versions may prevent byte-identical rebuilds. Included image assets support rebuilding without downloading videos or running the simulator.",
   "files_sha256": {
-    "research-paper-pilot6-submission12.pdf": "ba7d1f52915914df481005442e30e0d63cc838f7fa87b8e377c24240b1293e3f",
-    "research-paper-pilot6-submission12.tex": "237dede9f6c3940315e6bd395fd3d688381ae9be561f078913490f7d3d765b0f",
-    "requirements.lock.txt": "f3471a99f86fdf2479c56d9bd0075fc4bb6927f821ec920d606f69e85a06ac78",
-    "submission12-status.png": "6f40fd1bb298910a5883bf840fd244e7d127a8e0a53b56f0d7f054e0b8c4e1c0",
-    "results-snapshot.json": "ed97049dd585b5aa1c548d18268279d37c60bc44fbc154117a2ce9a6a2e7e2fc",
+    "README.md": "30a60af8a72a1a7ac88c11558fa0f8e92b74cf8ece273f983b702735939311f7",
+    "paper-assets/build_figures.py": "06ab7800e3f36d4cf8ff211bc0491447e656f1720b7e807b935a83fa52c563cf",
+    "paper-assets/final-results.pdf": "21e97acb1b6a2123fb8f20ff594a97412739d869ceac081870e06a9b0f0a95ef",
+    "paper-assets/method-overview.pdf": "0e34fc9140efb0e31047504359f3af1d550bb28f5216324087b21fa2ceed36a5",
+    "paper-assets/pilot-results.pdf": "78544afb7f9441529d78d0f5e1c1a90d22e76a74d14c04d219017d2683ccabff",
+    "paper-assets/provenance.json": "2337ec7f27c8947d654e089d156d60ba310dc6c46de4ba08de3dbc6668a92e3c",
+    "paper-assets/r1pro-official.png": "76d157e625c0ef7c64b437e343d4dbfbccb15b411a3e4d39b2c7fd56b0f1081f",
+    "paper-assets/representation-overview.pdf": "d10b8fb2a67e395523c8428a114571ac63562f238b743b0e66f3e3027f055984",
+    "paper-assets/task001-public0-t060-full.png": "1257b94e4681e589035a1bab8b385eccf3494053c51c906f2c95ed7b0f47c188",
+    "paper-assets/task001-public0-t132-full.png": "c6347f9a38d2efe017a82fcba082421a973fb4960c11135e984f0ec9351b6ffe",
+    "paper-assets/task001-public0-t184-full.png": "b3fec16a195092ca972bef274717a7893100f406bc0d07a4de89154695b056ee",
+    "paper-assets/task001-public0-t184-head.png": "a36622444df55f7680875c9d1e77b11c60f23bb38a8728f229b57b68aa6c6d62",
+    "paper-assets/task001-public0-t237-full.png": "9f87fd8fd9a0653b30f2fe2d9eb583ca0d7a0dd7bf9bbe00027b0f0425d42b8a",
+    "paper-assets/task002-public0-t050-head.png": "4229617a59a6c02be6814b201c424991422ca96917d2b4971d7df7d15a5aab93",
+    "paper-assets/task002-public0-t300-head.png": "e4eb5cbb34b4ba77be39e79a61c93c2f8435f01077c93e8b4ef421b150fa85f1",
+    "paper-assets/task002-public0-t500-head.png": "94799a96091eafc42a4d063955b3a0341156a53fc8ac8c5c72c188e1f8b9ad4f",
+    "paper-assets/task005-public1-last-head.png": "ec355986a5f67809f5dca6fae115997a992238e1ad765b0b267155235624e5ae",
+    "paper-assets/task005-public1-t100-head.png": "da56936b7841a478d245a734ad8c85cd8fbf6845ab3359bc4513dc5291ea5cc8",
+    "paper-assets/task005-public3-last-head.png": "bbac523136566b0d249046df6759a94fe5167bda45b1ddaa9bafbdcc01c6228c",
+    "pilot6-Q.png": "3407a600a0be3e76af4726d3686133bae5793cddf6ec179556b55c9f740d4124",
     "policy-pipeline.png": "5c563779996568078f1b5908dc085cf1c1c38435891b63d28ba7aa8cbbbc6b64",
-    "presentation-pilot6-submission12.pdf": "7bfb689968aa7277fe1f7bf52b81b9b1fdf76a2da38d9e8a891dd58bb604dbe1",
-    "pilot6-Q.png": "3407a600a0be3e76af4726d3686133bae5793cddf6ec179556b55c9f740d4124"
+    "presentation-assets/demo-task000.jpg": "6c72feb6fb2f3e4abbece09c0771095c2d42818e88724eee103923316a0337c7",
+    "presentation-assets/demo-task001.jpg": "b42cf65b5f0c8efda1d4ea4500eb145872cfd213d6632ba8c3e775aee2d6ee26",
+    "presentation-assets/demo-task002.jpg": "be26522c31072eb4964eeee13e5b58d97e3a3d4ffca1a0c8faae50bf40e3ec9f",
+    "presentation-assets/demo-task003.jpg": "f4232c49f14e68b728d1fa241d7a0d794b4c0b0aa437488e10d2df38095f36ff",
+    "presentation-assets/demo-task005.jpg": "de175bd2615e83035a6e8c84313eac16a23ab90244f48492e80a55839a14189f",
+    "presentation-assets/demo-task007.jpg": "c374afa7bd2d65cee117dd73dfe370a001c76d32e0f2341bb523264bef54a9a0",
+    "presentation-assets/rollout-source-provenance.json": "6b662ccc559bbbea83192825133e68d7360a96bb3bd8779b630f4668f03ae940",
+    "presentation-assets/task001-public0-t060-full.png": "1257b94e4681e589035a1bab8b385eccf3494053c51c906f2c95ed7b0f47c188",
+    "presentation-assets/task001-public0-t132-full.png": "c6347f9a38d2efe017a82fcba082421a973fb4960c11135e984f0ec9351b6ffe",
+    "presentation-assets/task001-public0-t237-full.png": "9f87fd8fd9a0653b30f2fe2d9eb583ca0d7a0dd7bf9bbe00027b0f0425d42b8a",
+    "presentation-assets/task002-public0-t300-head.png": "e4eb5cbb34b4ba77be39e79a61c93c2f8435f01077c93e8b4ef421b150fa85f1",
+    "presentation-assets/task002-public0-t500-full.png": "42e2cf39212f4cac8304b7892811e5eeca9b19bf89ff90435a902c93e1854c7b",
+    "presentation-assets/task002-public3-t230-full-from-contact.png": "67c766e8332cfbaf671a44886db124181b1a9bdee85ea38babc2480349684da1",
+    "presentation-assets/task005-public0-t100-head.png": "520bbde06566c067a43f439e68a7c0dcd283c044a81b32aba1c83b2f75065430",
+    "presentation-assets/task005-public1-last-head.png": "ec355986a5f67809f5dca6fae115997a992238e1ad765b0b267155235624e5ae",
+    "presentation-assets/task005-public3-last-head.png": "bbac523136566b0d249046df6759a94fe5167bda45b1ddaa9bafbdcc01c6228c",
+    "presentation-assets/verified-facts.json": "8517014bc6891be85de0d91ca86cdd0f30ce07284afcd146019be53e3cd69323",
+    "presentation-pilot6-submission12.pdf": "136fef2479fca75b6f642b2c21496c615c59a138640deeaf28e3fbb6c52208be",
+    "requirements.lock.txt": "f3471a99f86fdf2479c56d9bd0075fc4bb6927f821ec920d606f69e85a06ac78",
+    "research-paper-pilot6-submission12.pdf": "9b267d56a9f074d1fa2d7d87386af740c1cab980278be147a79509e74918c887",
+    "research-paper-pilot6-submission12.tex": "a452e6d02b49974739300322082ff138f185b76725372a28e4ab85a8b7dcdf9c",
+    "results-snapshot.json": "ed97049dd585b5aa1c548d18268279d37c60bc44fbc154117a2ce9a6a2e7e2fc",
+    "submission12-status.png": "6f40fd1bb298910a5883bf840fd244e7d127a8e0a53b56f0d7f054e0b8c4e1c0"
+  },
+  "build_sources_sha256": {
+    "scripts/build_visual_presentation.py": "8d0a06d11a09d636cde27df6b4f32225c6f9a09ff37951190a832abfb8b8fa54",
+    "docs/reports/submission-2026/paper-assets/build_figures.py": "06ab7800e3f36d4cf8ff211bc0491447e656f1720b7e807b935a83fa52c563cf"
+  },
+  "external_inputs_sha256": {
+    "results/results.json": "2fc88eadbd306638fbfbab25c0e77073123f06ae14cdec47b33c962ce81d9ade",
+    "docs/submission-2026/ILIA-RT-EXPO-INFERENCE-AUDIT.md": "ffa6d40d106ec9e0d24afbc306bc5db78ee9f4307a89a20c6b3ef8f7e2792932",
+    "submission/model-manifest.candidate.json": "32b87771bb93be6cd48d642c55fad2ba4ad12c23715f1a22c6eb15b57918b675"
   }
 }
