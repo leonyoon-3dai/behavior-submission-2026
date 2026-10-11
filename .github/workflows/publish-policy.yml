@@ -1,0 +1,34 @@
+name: Publish frozen submission policy
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+concurrency:
+  group: frozen-policy-release
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare ephemeral CPU runner storage
+        run: |
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc /opt/hostedtoolcache
+          sudo apt-get update -qq
+          sudo apt-get install -y zstd
+          df -h /
+      - name: Authenticate automatically to GHCR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: printf '%s' "$GITHUB_TOKEN" | docker login ghcr.io -u "${{ github.repository_owner }}" --password-stdin
+      - name: Verify preserved image and publish exact frozen release
+        run: python scripts/publish_preserved_image.py
+      - name: Preserve registry digest and download evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: registry-release
+          path: registry-release.json
+          if-no-files-found: warn

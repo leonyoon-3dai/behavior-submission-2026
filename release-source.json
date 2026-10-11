@@ -1,0 +1,21 @@
+{
+  "archive_url": "https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/01a2022ac01201a1607e85998c85dceecf83162c/release/clean12-ghcr-release-20261011.tar.zst",
+  "archive_sha256": "aa0cd40ea83fb40a99cb6600b50d73ebda6d646377c6d5ef4b71ab78c9c6cd90",
+  "archive_bytes": 28599236291,
+  "image_id": "sha256:3098b31a4a6b222bc4a1f23f879da6a72b54bc15d5cc89183b2fff99c413cf4e",
+  "image_bytes": 33628621702,
+  "registry_uri": "ghcr.io/leonyoon-3dai/behavior-submission-2026:submission12-20261011",
+  "model_layer_bytes": [
+    3672255592,
+    2343394790,
+    2239735079,
+    2239731314,
+    2169166922,
+    3270155295,
+    2239742393,
+    2519720598,
+    2307684342,
+    2319801321
+  ],
+  "model_manifest_sha256": "b7fc85531c0b83136ba10f16e9fc710bd58b63a3cef79cc4984f094e2038e791"
+}

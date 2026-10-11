@@ -1,0 +1,4672 @@
+{
+  "updated_utc": "2026-10-11T10:19:20.963444+00:00",
+  "pilot6": {
+    "completed": 36,
+    "tasks": {
+      "0": {
+        "conditions": {
+          "A0-original": {
+            "completed": 3,
+            "target": 3,
+            "successes": 2,
+            "mean_Q": 0.6666666666666666,
+            "mean_steps": 1870.6666666666667,
+            "rollout_minutes": 19.72016016408326,
+            "native_goal_grasp_rollouts": 3
+          },
+          "RT-EXPO": {
+            "completed": 3,
+            "target": 3,
+            "successes": 1,
+            "mean_Q": 0.3333333333333333,
+            "mean_steps": 2925,
+            "rollout_minutes": 40.419339634033285,
+            "native_goal_grasp_rollouts": 2
+          }
+        },
+        "complete_pairs": 3,
+        "timeout_strata": {
+          "full": {
+            "complete_pairs": 3,
+            "paired_mean_delta_Q": -0.3333333333333333,
+            "A0_successes": 2,
+            "RT_successes": 1
+          },
+          "half": {
+            "complete_pairs": 0,
+            "paired_mean_delta_Q": null,
+            "A0_successes": 0,
+            "RT_successes": 0
+          }
+        },
+        "paired_mean_delta_Q": -0.3333333333333333
+      },
+      "1": {
+        "conditions": {
+          "A0-original": {
+            "completed": 3,
+            "target": 3,
+            "successes": 1,
+            "mean_Q": 0.4444444444444444,
+            "mean_steps": 6839.333333333333,
+            "rollout_minutes": 76.17465704181664,
+            "native_goal_grasp_rollouts": 3
+          },
+          "RT-EXPO": {
+            "completed": 3,
+            "target": 3,
+            "successes": 0,
+            "mean_Q": 0.6666666666666666,
+            "mean_steps": 7902,
+            "rollout_minutes": 83.61971850301673,
+            "native_goal_grasp_rollouts": 3
+          }
+        },
+        "complete_pairs": 3,
+        "timeout_strata": {
+          "full": {
+            "complete_pairs": 3,
+            "paired_mean_delta_Q": 0.22222222222222218,
+            "A0_successes": 1,
+            "RT_successes": 0
+          },
+          "half": {
+            "complete_pairs": 0,
+            "paired_mean_delta_Q": null,
+            "A0_successes": 0,
+            "RT_successes": 0
+          }
+        },
+        "paired_mean_delta_Q": 0.22222222222222218
+      },
+      "2": {
+        "conditions": {
+          "A0-original": {
+            "completed": 3,
+            "target": 3,
+            "successes": 0,
+            "mean_Q": 0.23809523809523808,
+            "mean_steps": 20683,
+            "rollout_minutes": 206.81100700319996,
+            "native_goal_grasp_rollouts": 3
+          },
+          "RT-EXPO": {
+            "completed": 3,
+            "target": 3,
+            "successes": 0,
+            "mean_Q": 0.14285714285714285,
+            "mean_steps": 20683,
+            "rollout_minutes": 216.33824304414992,
+            "native_goal_grasp_rollouts": 3
+          }
+        },
+        "complete_pairs": 3,
+        "timeout_strata": {
+          "full": {
+            "complete_pairs": 3,
+            "paired_mean_delta_Q": -0.09523809523809523,
+            "A0_successes": 0,
+            "RT_successes": 0
+          },
+          "half": {
+            "complete_pairs": 0,
+            "paired_mean_delta_Q": null,
+            "A0_successes": 0,
+            "RT_successes": 0
+          }
+        },
+        "paired_mean_delta_Q": -0.09523809523809523
+      },
+      "3": {
+        "conditions": {
+          "A0-original": {
+            "completed": 3,
+            "target": 3,
+            "successes": 1,
+            "mean_Q": 0.38095238095238093,
+            "mean_steps": 17208,
+            "rollout_minutes": 185.42347255111673,
+            "native_goal_grasp_rollouts": 3
+          },
+          "RT-EXPO": {
+            "completed": 3,
+            "target": 3,
+            "successes": 0,
+            "mean_Q": 0.3333333333333333,
+            "mean_steps": 20545,
+            "rollout_minutes": 235.2535011628833,
+            "native_goal_grasp_rollouts": 3
+          }
+        },
+        "complete_pairs": 3,
+        "timeout_strata": {
+          "full": {
+            "complete_pairs": 3,
+            "paired_mean_delta_Q": -0.04761904761904764,
+            "A0_successes": 1,
+            "RT_successes": 0
+          },
+          "half": {
+            "complete_pairs": 0,
+            "paired_mean_delta_Q": null,
+            "A0_successes": 0,
+            "RT_successes": 0
+          }
+        },
+        "paired_mean_delta_Q": -0.04761904761904764
+      },
+      "5": {
+        "conditions": {
+          "A0-original": {
+            "completed": 3,
+            "target": 3,
+            "successes": 1,
+            "mean_Q": 0.4444444444444444,
+            "mean_steps": 14391.333333333334,
+            "rollout_minutes": 127.70901001115004,
+            "native_goal_grasp_rollouts": 2
+          },
+          "RT-EXPO": {
+            "completed": 3,
+            "target": 3,
+            "successes": 0,
+            "mean_Q": 0.4444444444444444,
+            "mean_steps": 15295,
+            "rollout_minutes": 145.65111457219984,
+            "native_goal_grasp_rollouts": 3
+          }
+        },
+        "complete_pairs": 3,
+        "timeout_strata": {
+          "full": {
+            "complete_pairs": 3,
+            "paired_mean_delta_Q": -9.25185853854297e-18,
+            "A0_successes": 1,
+            "RT_successes": 0
+          },
+          "half": {
+            "complete_pairs": 0,
+            "paired_mean_delta_Q": null,
+            "A0_successes": 0,
+            "RT_successes": 0
+          }
+        },
+        "paired_mean_delta_Q": -9.25185853854297e-18
+      },
+      "7": {
+        "conditions": {
+          "A0-original": {
+            "completed": 3,
+            "target": 3,
+            "successes": 0,
+            "mean_Q": 0.5555555555555556,
+            "mean_steps": 28336,
+            "rollout_minutes": 370.03978643519997,
+            "native_goal_grasp_rollouts": 3
+          },
+          "RT-EXPO": {
+            "completed": 3,
+            "target": 3,
+            "successes": 0,
+            "mean_Q": 0.05555555555555555,
+            "mean_steps": 28336,
+            "rollout_minutes": 382.5899288513334,
+            "native_goal_grasp_rollouts": 1
+          }
+        },
+        "complete_pairs": 3,
+        "timeout_strata": {
+          "full": {
+            "complete_pairs": 3,
+            "paired_mean_delta_Q": -0.5,
+            "A0_successes": 0,
+            "RT_successes": 0
+          },
+          "half": {
+            "complete_pairs": 0,
+            "paired_mean_delta_Q": null,
+            "A0_successes": 0,
+            "RT_successes": 0
+          }
+        },
+        "paired_mean_delta_Q": -0.5
+      }
+    },
+    "physical_rows": [
+      {
+        "timeout_regime": "full",
+        "task_id": 0,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "official_success": true,
+        "official_Q_final": 1.0,
+        "official_Q_max": 1.0,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 1.0,
+        "steps": 1429,
+        "rollout_seconds": 320.32962380499976,
+        "whole_attempt_seconds": 554.7870405110002,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "radio_receiver.n.01_1/right": 160
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "radio_receiver.n.01_1",
+            "arm": "right",
+            "native_step": 1270
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "radio_receiver.n.01_1"
+        ],
+        "goal_object_centers": {},
+        "button_contact_seconds": 0.1666666716337204,
+        "reused_prior_pair": true,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/b2-l40-resume-20261008T0451/A0/attempt-1-instance-0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "d4cbff228e59ed19869dfb6ab4311c1558babe9badb3b7e0bdbcb643f8c2e60b",
+        "capture_alignment_verified": true,
+        "toggled_on": true,
+        "first_failed_stage": null,
+        "max_radio_center_height_delta_m": 0.24057799577713013,
+        "max_radio_center_displacement_m": 0.2936434890298305,
+        "max_radio_marker_height_delta_m": 0.24735558032989502
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 0,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 3225,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.393364253002801
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 3226,
+        "rollout_seconds": 1134.3293864010047,
+        "whole_attempt_seconds": 1374.9697964739898,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "radio_receiver.n.01_1/right": 2032
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "radio_receiver.n.01_1",
+            "arm": "right",
+            "native_step": 1195
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "radio_receiver.n.01_1"
+        ],
+        "goal_object_centers": {
+          "radio_receiver.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.3054928779602051,
+            "max_displacement_m": 0.31046059477993293
+          }
+        },
+        "button_contact_seconds": 0.0,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task000-RT-EXPO-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "d4cbff228e59ed19869dfb6ab4311c1558babe9badb3b7e0bdbcb643f8c2e60b",
+        "capture_alignment_verified": true,
+        "toggled_on": false,
+        "first_failed_stage": "button contact unconfirmed",
+        "max_radio_center_height_delta_m": 0.3054928779602051,
+        "max_radio_center_displacement_m": 0.31046059477993293,
+        "max_radio_marker_height_delta_m": 0.2690604329109192
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 0,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 3226,
+        "rollout_seconds": 645.4034955030002,
+        "whole_attempt_seconds": 833.581265115994,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "radio_receiver.n.01_1/left": 1208
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "radio_receiver.n.01_1",
+            "arm": "left",
+            "native_step": 2019
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "radio_receiver.n.01_1"
+        ],
+        "goal_object_centers": {
+          "radio_receiver.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.3009459972381592,
+            "max_displacement_m": 0.3397595330475484
+          }
+        },
+        "button_contact_seconds": 0.0,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-rt-three-task-e2e-20261008T1255/task000-A0-original-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "766513a4661456debc09ec09b6ee619e18cefa09f7351a368634d7ed1c493893",
+        "capture_alignment_verified": true,
+        "toggled_on": false,
+        "first_failed_stage": "button contact unconfirmed",
+        "max_radio_center_height_delta_m": 0.3009459972381592,
+        "max_radio_center_displacement_m": 0.3397595330475484,
+        "max_radio_marker_height_delta_m": 0.25901204347610474
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 0,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 3225,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3569906339980662
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 3226,
+        "rollout_seconds": 779.655407992992,
+        "whole_attempt_seconds": 1018.0578440300014,
+        "native_goal_grasp": false,
+        "native_grasp_steps": {},
+        "native_grasp_onsets": [],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [],
+        "goal_object_centers": {
+          "radio_receiver.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.0132789611816406e-06,
+            "max_displacement_m": 4.80141219452532e-06
+          }
+        },
+        "button_contact_seconds": 0.0,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task000-RT-EXPO-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "766513a4661456debc09ec09b6ee619e18cefa09f7351a368634d7ed1c493893",
+        "capture_alignment_verified": true,
+        "toggled_on": false,
+        "first_failed_stage": "native grasp unconfirmed",
+        "max_radio_center_height_delta_m": 1.0132789611816406e-06,
+        "max_radio_center_displacement_m": 4.80141219452532e-06,
+        "max_radio_marker_height_delta_m": 3.4570693969726562e-06
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 0,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "official_success": true,
+        "official_Q_final": 1.0,
+        "official_Q_max": 1.0,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 1.0,
+        "steps": 957,
+        "rollout_seconds": 217.4764905369957,
+        "whole_attempt_seconds": 405.332572694002,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "radio_receiver.n.01_1/right": 249
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "radio_receiver.n.01_1",
+            "arm": "right",
+            "native_step": 709
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "radio_receiver.n.01_1"
+        ],
+        "goal_object_centers": {
+          "radio_receiver.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.5815933346748352,
+            "max_displacement_m": 0.5974119745644751
+          }
+        },
+        "button_contact_seconds": 0.1666666716337204,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-rt-three-task-e2e-20261008T1255/task000-A0-original-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "9a42acf14315980ef3f31bbfb70b59bdf3f2d726f9edb8e59d12ac76cc0eaa7f",
+        "capture_alignment_verified": true,
+        "toggled_on": true,
+        "first_failed_stage": null,
+        "max_radio_center_height_delta_m": 0.5815933346748352,
+        "max_radio_center_displacement_m": 0.5974119745644751,
+        "max_radio_marker_height_delta_m": 0.6503650546073914
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 0,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 3225,
+        "official_success": true,
+        "official_Q_final": 1.0,
+        "official_Q_max": 1.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3219038380048005
+          },
+          {
+            "step": 2323,
+            "Q": 1.0,
+            "wall_seconds": 511.1755836480006
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 1.0,
+        "steps": 2323,
+        "rollout_seconds": 511.1755836480006,
+        "whole_attempt_seconds": 722.4941535199905,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "radio_receiver.n.01_1/right": 530
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "radio_receiver.n.01_1",
+            "arm": "right",
+            "native_step": 1794
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "radio_receiver.n.01_1"
+        ],
+        "goal_object_centers": {
+          "radio_receiver.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.5863435864448547,
+            "max_displacement_m": 0.5874023885199423
+          }
+        },
+        "button_contact_seconds": 0.1666666716337204,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task000-RT-EXPO-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "9a42acf14315980ef3f31bbfb70b59bdf3f2d726f9edb8e59d12ac76cc0eaa7f",
+        "capture_alignment_verified": true,
+        "toggled_on": true,
+        "first_failed_stage": null,
+        "max_radio_center_height_delta_m": 0.5863435864448547,
+        "max_radio_center_displacement_m": 0.5874023885199423,
+        "max_radio_marker_height_delta_m": 0.6543366312980652
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 1,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 7902,
+        "rollout_seconds": 1556.2484204159991,
+        "whole_attempt_seconds": 1752.0546792820023,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "ashcan.n.01_1/right": 6874,
+          "can__of__soda.n.01_1/left": 3761
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 1029
+          },
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 2109
+          },
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 3067
+          },
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 7582
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 2395
+          },
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 6221
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "can__of__soda.n.01_1"
+        ],
+        "goal_object_centers": {
+          "can__of__soda.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 5.50440100567086e-06
+          },
+          "can__of__soda.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 2.9802322387695312e-08,
+            "max_displacement_m": 6.778767358452817e-06
+          },
+          "can__of__soda.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6852655857801437,
+            "max_displacement_m": 0.831604406137467
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-rt-three-task-e2e-20261008T1255/task001-A0-original-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "951b5b3351428a78056ee54785d7f386db63fba692c493990ef9c9f2a2e42bfc",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 1,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "official_success": false,
+        "official_Q_final": 0.6666666666666666,
+        "official_Q_max": 0.6666666666666666,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.6666666666666666,
+        "steps": 7902,
+        "rollout_seconds": 1608.9077330330038,
+        "whole_attempt_seconds": 1813.2167931170043,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "ashcan.n.01_1/right": 6858,
+          "can__of__soda.n.01_1/left": 963,
+          "can__of__soda.n.01_2/left": 1233
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 1045
+          },
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 3745
+          },
+          {
+            "object": "can__of__soda.n.01_2",
+            "arm": "left",
+            "native_step": 5742
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 4708
+          },
+          {
+            "object": "can__of__soda.n.01_2",
+            "arm": "left",
+            "native_step": 6975
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "can__of__soda.n.01_1",
+          "can__of__soda.n.01_2"
+        ],
+        "goal_object_centers": {
+          "can__of__soda.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 5.50440100567086e-06
+          },
+          "can__of__soda.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.9102817624807358,
+            "max_displacement_m": 1.5143962538311566
+          },
+          "can__of__soda.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8507024943828583,
+            "max_displacement_m": 0.8609483504385224
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-rt-three-task-e2e-20261008T1255/task001-RT-EXPO-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "951b5b3351428a78056ee54785d7f386db63fba692c493990ef9c9f2a2e42bfc",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 1,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 7901,
+        "official_success": false,
+        "official_Q_final": 0.3333333333333333,
+        "official_Q_max": 0.3333333333333333,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 3.1498499399999673
+          },
+          {
+            "step": 2283,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 599.5638491029999
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.3333333333333333,
+        "steps": 7902,
+        "rollout_seconds": 2004.5480907269998,
+        "whole_attempt_seconds": 2541.637804491,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "ashcan.n.01_1/right": 2450,
+          "can__of__soda.n.01_3/left": 203
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 703
+          },
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 2076
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 2279
+          },
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 3153
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "can__of__soda.n.01_3"
+        ],
+        "goal_object_centers": {
+          "can__of__soda.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.5847578793764114,
+            "max_displacement_m": 0.6394160782252785
+          },
+          "can__of__soda.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0051055774092674255,
+            "max_displacement_m": 0.9573557695484738
+          },
+          "can__of__soda.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 6.705522537231445e-08,
+            "max_displacement_m": 6.680524775621809e-06
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task001-A0-original-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "d31973a7bfa47c97a1c00239e2dfc6d48182be03f4605a0f20c67bc7fe71fd1c",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 1,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 7901,
+        "official_success": false,
+        "official_Q_final": 0.6666666666666666,
+        "official_Q_max": 0.6666666666666666,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.32683719099986774
+          },
+          {
+            "step": 2701,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 628.6957515149998
+          },
+          {
+            "step": 6054,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 1302.3575936630004
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.6666666666666666,
+        "steps": 7902,
+        "rollout_seconds": 1648.9223399700004,
+        "whole_attempt_seconds": 1846.2643074910002,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "ashcan.n.01_1/right": 6989,
+          "can__of__soda.n.01_1/left": 422,
+          "can__of__soda.n.01_3/left": 2260
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 914
+          },
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 2316
+          },
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 3786
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 2738
+          },
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 6046
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "can__of__soda.n.01_1",
+          "can__of__soda.n.01_3"
+        ],
+        "goal_object_centers": {
+          "can__of__soda.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7522910311818123,
+            "max_displacement_m": 2.8611707571095977
+          },
+          "can__of__soda.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8200301676988602,
+            "max_displacement_m": 1.315937266692264
+          },
+          "can__of__soda.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 6.705522537231445e-08,
+            "max_displacement_m": 6.680524775621809e-06
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task001-RT-EXPO-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "d31973a7bfa47c97a1c00239e2dfc6d48182be03f4605a0f20c67bc7fe71fd1c",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 1,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 7901,
+        "official_success": true,
+        "official_Q_final": 1.0,
+        "official_Q_max": 1.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.31204683699979796
+          },
+          {
+            "step": 2730,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 613.1986143729991
+          },
+          {
+            "step": 3745,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 813.0384989239992
+          },
+          {
+            "step": 4714,
+            "Q": 1.0,
+            "wall_seconds": 1009.6829113660006
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 1.0,
+        "steps": 4714,
+        "rollout_seconds": 1009.6829113660006,
+        "whole_attempt_seconds": 1194.4893145690003,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "ashcan.n.01_1/right": 3760,
+          "can__of__soda.n.01_1/left": 301,
+          "can__of__soda.n.01_2/left": 373,
+          "can__of__soda.n.01_3/left": 337
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 955
+          },
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 2424
+          },
+          {
+            "object": "can__of__soda.n.01_2",
+            "arm": "left",
+            "native_step": 3369
+          },
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 4373
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "can__of__soda.n.01_1",
+            "arm": "left",
+            "native_step": 2725
+          },
+          {
+            "object": "can__of__soda.n.01_2",
+            "arm": "left",
+            "native_step": 3742
+          },
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 4710
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "can__of__soda.n.01_1",
+          "can__of__soda.n.01_2",
+          "can__of__soda.n.01_3"
+        ],
+        "goal_object_centers": {
+          "can__of__soda.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7500246614217758,
+            "max_displacement_m": 2.2044764075758922
+          },
+          "can__of__soda.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6872674599289894,
+            "max_displacement_m": 1.1113096194812002
+          },
+          "can__of__soda.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6824773550033569,
+            "max_displacement_m": 0.7781593625658525
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task001-A0-original-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "2a30737f0898375aef80ed608b826c39b8a01178b171e017a2a80cd279fce514",
+        "capture_alignment_verified": true,
+        "first_failed_stage": null
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 1,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 7901,
+        "official_success": false,
+        "official_Q_final": 0.6666666666666666,
+        "official_Q_max": 0.6666666666666666,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3108883719996811
+          },
+          {
+            "step": 3352,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 775.7090336049987
+          },
+          {
+            "step": 4294,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 980.5360152729991
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.6666666666666666,
+        "steps": 7902,
+        "rollout_seconds": 1759.3530371779998,
+        "whole_attempt_seconds": 1961.7384223099998,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "ashcan.n.01_1/right": 3250,
+          "can__of__soda.n.01_2/left": 260,
+          "can__of__soda.n.01_3/left": 418
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 1417
+          },
+          {
+            "object": "can__of__soda.n.01_2",
+            "arm": "left",
+            "native_step": 3136
+          },
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 3874
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "can__of__soda.n.01_2",
+            "arm": "left",
+            "native_step": 3396
+          },
+          {
+            "object": "can__of__soda.n.01_3",
+            "arm": "left",
+            "native_step": 4292
+          },
+          {
+            "object": "ashcan.n.01_1",
+            "arm": "right",
+            "native_step": 4667
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "can__of__soda.n.01_2",
+          "can__of__soda.n.01_3"
+        ],
+        "goal_object_centers": {
+          "can__of__soda.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8134291768074036,
+            "max_displacement_m": 0.8692424178587531
+          },
+          "can__of__soda.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7004349604249,
+            "max_displacement_m": 1.2372876835085982
+          },
+          "can__of__soda.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 8.940696716308594e-08,
+            "max_displacement_m": 1.1533498764038086e-05
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task001-RT-EXPO-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "2a30737f0898375aef80ed608b826c39b8a01178b171e017a2a80cd279fce514",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 2,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "official_success": false,
+        "official_Q_final": 0.2857142857142857,
+        "official_Q_max": 0.2857142857142857,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.2857142857142857,
+        "steps": 20683,
+        "rollout_seconds": 4121.906948423995,
+        "whole_attempt_seconds": 4315.674986421,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "candle.n.01_1/right": 2197,
+          "cabinet.n.01_1/left": 530,
+          "candle.n.01_3/right": 3358
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "candle.n.01_1",
+            "arm": "right",
+            "native_step": 607
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "left",
+            "native_step": 1846
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "left",
+            "native_step": 2056
+          },
+          {
+            "object": "candle.n.01_3",
+            "arm": "right",
+            "native_step": 3569
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "left",
+            "native_step": 4805
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "left",
+            "native_step": 2040
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "left",
+            "native_step": 2161
+          },
+          {
+            "object": "candle.n.01_1",
+            "arm": "right",
+            "native_step": 2804
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "left",
+            "native_step": 5036
+          },
+          {
+            "object": "candle.n.01_3",
+            "arm": "right",
+            "native_step": 6927
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "candle.n.01_1",
+          "candle.n.01_3"
+        ],
+        "goal_object_centers": {
+          "candle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.730681698769331,
+            "max_displacement_m": 1.2253286703739665
+          },
+          "candle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0005306638777256012,
+            "max_displacement_m": 0.0013554006603382451
+          },
+          "caldron.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 3.725290298461914e-08,
+            "max_displacement_m": 5.405651672845201e-07
+          },
+          "pumpkin.n.02_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 4.81024278097988e-07
+          },
+          "pumpkin.n.02_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 8.67992639541626e-07,
+            "max_displacement_m": 1.9413560050239757e-05
+          },
+          "candle.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.701162576675415,
+            "max_displacement_m": 1.7831389413014744
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-rt-three-task-e2e-20261008T1255/task002-A0-original-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "41df26fa2eb14893d8f25b83ff904b682f68f373e2137838f02d3bc7d03cd177",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 2,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 20683,
+        "rollout_seconds": 4174.986740618995,
+        "whole_attempt_seconds": 4374.767189211998,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "candle.n.01_1/right": 19706,
+          "candle.n.01_2/left": 17396
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "candle.n.01_1",
+            "arm": "right",
+            "native_step": 978
+          },
+          {
+            "object": "candle.n.01_2",
+            "arm": "left",
+            "native_step": 3288
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "candle.n.01_1",
+          "candle.n.01_2"
+        ],
+        "goal_object_centers": {
+          "candle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.9094146303832531,
+            "max_displacement_m": 2.0471323420791196
+          },
+          "candle.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0033354423940181732,
+            "max_displacement_m": 0.9845806620904713
+          },
+          "candle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8565354757010937,
+            "max_displacement_m": 2.9008370085369064
+          },
+          "pumpkin.n.02_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 4.81024278097988e-07
+          },
+          "pumpkin.n.02_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 8.67992639541626e-07,
+            "max_displacement_m": 1.9413560050239757e-05
+          },
+          "caldron.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 3.725290298461914e-08,
+            "max_displacement_m": 5.405651672845201e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-rt-three-task-e2e-20261008T1255/task002-RT-EXPO-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "41df26fa2eb14893d8f25b83ff904b682f68f373e2137838f02d3bc7d03cd177",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 2,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 20682,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.29556802899969625
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 20683,
+        "rollout_seconds": 4127.907649959001,
+        "whole_attempt_seconds": 4319.985435409999,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "candle.n.01_1/left": 19116,
+          "candle.n.01_2/right": 19432
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "candle.n.01_1",
+            "arm": "left",
+            "native_step": 581
+          },
+          {
+            "object": "candle.n.01_2",
+            "arm": "right",
+            "native_step": 1252
+          },
+          {
+            "object": "candle.n.01_1",
+            "arm": "left",
+            "native_step": 6828
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "candle.n.01_1",
+            "arm": "left",
+            "native_step": 5841
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "candle.n.01_1",
+          "candle.n.01_2"
+        ],
+        "goal_object_centers": {
+          "pumpkin.n.02_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.699694156646729e-07,
+            "max_displacement_m": 1.581079254090262e-05
+          },
+          "pumpkin.n.02_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.4901161193847656e-07,
+            "max_displacement_m": 0.00023993262149802602
+          },
+          "candle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8680697940289974,
+            "max_displacement_m": 2.4435779128318726
+          },
+          "candle.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0002993829548358917,
+            "max_displacement_m": 0.00106556169761628
+          },
+          "candle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8209887333214283,
+            "max_displacement_m": 3.029665438463433
+          },
+          "caldron.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.21540641784668e-08,
+            "max_displacement_m": 4.2981520598697533e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task002-A0-original-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "8a939a04d52e5d8a92e16a802fd609b615b9c8f6fd26a9547588cf049a18fd44",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 2,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 20682,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3285316790024808
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 20683,
+        "rollout_seconds": 4474.045993324002,
+        "whole_attempt_seconds": 4674.596399572001,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "candle.n.01_1/right": 19464,
+          "candle.n.01_2/left": 17735
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "candle.n.01_1",
+            "arm": "right",
+            "native_step": 1220
+          },
+          {
+            "object": "candle.n.01_2",
+            "arm": "left",
+            "native_step": 2949
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "candle.n.01_1",
+          "candle.n.01_2"
+        ],
+        "goal_object_centers": {
+          "candle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7260169647634029,
+            "max_displacement_m": 2.887263437611298
+          },
+          "candle.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0002993829548358917,
+            "max_displacement_m": 0.00106556169761628
+          },
+          "pumpkin.n.02_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.699694156646729e-07,
+            "max_displacement_m": 1.581079254090262e-05
+          },
+          "pumpkin.n.02_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.4901161193847656e-07,
+            "max_displacement_m": 0.00023993262149802602
+          },
+          "candle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7000427432358265,
+            "max_displacement_m": 2.2466690187238765
+          },
+          "caldron.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.21540641784668e-08,
+            "max_displacement_m": 4.2981520598697533e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task002-RT-EXPO-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "8a939a04d52e5d8a92e16a802fd609b615b9c8f6fd26a9547588cf049a18fd44",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 2,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 20682,
+        "official_success": false,
+        "official_Q_final": 0.42857142857142855,
+        "official_Q_max": 0.42857142857142855,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.2933049560015206
+          },
+          {
+            "step": 1962,
+            "Q": 0.14285714285714285,
+            "wall_seconds": 431.6640122659992
+          },
+          {
+            "step": 1992,
+            "Q": 0.0,
+            "wall_seconds": 437.1008506930011
+          },
+          {
+            "step": 2005,
+            "Q": 0.14285714285714285,
+            "wall_seconds": 439.91754162000143
+          },
+          {
+            "step": 5497,
+            "Q": 0.2857142857142857,
+            "wall_seconds": 1145.4204674560024
+          },
+          {
+            "step": 5531,
+            "Q": 0.14285714285714285,
+            "wall_seconds": 1151.9652012120023
+          },
+          {
+            "step": 6853,
+            "Q": 0.2857142857142857,
+            "wall_seconds": 1397.4842810310001
+          },
+          {
+            "step": 10322,
+            "Q": 0.42857142857142855,
+            "wall_seconds": 2103.335087509
+          },
+          {
+            "step": 10326,
+            "Q": 0.2857142857142857,
+            "wall_seconds": 2104.086183266001
+          },
+          {
+            "step": 10344,
+            "Q": 0.42857142857142855,
+            "wall_seconds": 2107.623659028999
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.42857142857142855,
+        "steps": 20683,
+        "rollout_seconds": 4158.845821809002,
+        "whole_attempt_seconds": 4345.742998741996,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "cabinet.n.01_1/right": 638,
+          "pumpkin.n.02_1/right": 737,
+          "candle.n.01_3/right": 2383,
+          "caldron.n.01_1/left": 1431,
+          "pumpkin.n.02_2/right": 1437
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 438
+          },
+          {
+            "object": "pumpkin.n.02_1",
+            "arm": "right",
+            "native_step": 1268
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 2781
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 3548
+          },
+          {
+            "object": "candle.n.01_3",
+            "arm": "right",
+            "native_step": 4575
+          },
+          {
+            "object": "caldron.n.01_1",
+            "arm": "left",
+            "native_step": 5370
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 8253
+          },
+          {
+            "object": "pumpkin.n.02_2",
+            "arm": "right",
+            "native_step": 9027
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 589
+          },
+          {
+            "object": "pumpkin.n.02_1",
+            "arm": "right",
+            "native_step": 2005
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 2881
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 3807
+          },
+          {
+            "object": "caldron.n.01_1",
+            "arm": "left",
+            "native_step": 6801
+          },
+          {
+            "object": "candle.n.01_3",
+            "arm": "right",
+            "native_step": 6958
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 8381
+          },
+          {
+            "object": "pumpkin.n.02_2",
+            "arm": "right",
+            "native_step": 10464
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "caldron.n.01_1",
+          "candle.n.01_3",
+          "pumpkin.n.02_1",
+          "pumpkin.n.02_2"
+        ],
+        "goal_object_centers": {
+          "candle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.006824083626270294,
+            "max_displacement_m": 0.35252198320654593
+          },
+          "candle.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8761689364910126,
+            "max_displacement_m": 2.826577898007161
+          },
+          "candle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 8.568167686462402e-08,
+            "max_displacement_m": 6.914669667575587e-06
+          },
+          "caldron.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6086509898304939,
+            "max_displacement_m": 5.8034099351129935
+          },
+          "pumpkin.n.02_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.634100791066885,
+            "max_displacement_m": 3.3870769851123006
+          },
+          "pumpkin.n.02_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7368510514497757,
+            "max_displacement_m": 1.552537446173156
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task002-A0-original-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "d4f065000052454fc7926fb0a21067a5cac5603a72153137da0cde1444e1797f",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 2,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 20682,
+        "official_success": false,
+        "official_Q_final": 0.42857142857142855,
+        "official_Q_max": 0.42857142857142855,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.28793471600147313
+          },
+          {
+            "step": 4380,
+            "Q": 0.2857142857142857,
+            "wall_seconds": 972.1538454760012
+          },
+          {
+            "step": 7526,
+            "Q": 0.42857142857142855,
+            "wall_seconds": 1618.98609622
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.42857142857142855,
+        "steps": 20683,
+        "rollout_seconds": 4331.261848705999,
+        "whole_attempt_seconds": 4528.899547,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "cabinet.n.01_1/right": 714,
+          "pumpkin.n.02_1/right": 2491,
+          "candle.n.01_2/left": 1482,
+          "candle.n.01_3/left": 1735
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 853
+          },
+          {
+            "object": "pumpkin.n.02_1",
+            "arm": "right",
+            "native_step": 1955
+          },
+          {
+            "object": "candle.n.01_2",
+            "arm": "left",
+            "native_step": 2971
+          },
+          {
+            "object": "candle.n.01_3",
+            "arm": "left",
+            "native_step": 5821
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 9081
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 1092
+          },
+          {
+            "object": "pumpkin.n.02_1",
+            "arm": "right",
+            "native_step": 4446
+          },
+          {
+            "object": "candle.n.01_2",
+            "arm": "left",
+            "native_step": 4453
+          },
+          {
+            "object": "candle.n.01_3",
+            "arm": "left",
+            "native_step": 7556
+          },
+          {
+            "object": "cabinet.n.01_1",
+            "arm": "right",
+            "native_step": 9556
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "candle.n.01_2",
+          "candle.n.01_3",
+          "pumpkin.n.02_1"
+        ],
+        "goal_object_centers": {
+          "candle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 8.568167686462402e-08,
+            "max_displacement_m": 6.914669667575587e-06
+          },
+          "candle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6685494519770145,
+            "max_displacement_m": 2.166609218183194
+          },
+          "pumpkin.n.02_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.8309197574853897,
+            "max_displacement_m": 1.9294499454984033
+          },
+          "pumpkin.n.02_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 4.3213367462158203e-07,
+            "max_displacement_m": 1.192771636437631e-05
+          },
+          "candle.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6391028463840485,
+            "max_displacement_m": 3.043400773810912
+          },
+          "caldron.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 6.705522537231445e-08,
+            "max_displacement_m": 4.815288970487274e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task002-RT-EXPO-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "d4f065000052454fc7926fb0a21067a5cac5603a72153137da0cde1444e1797f",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 3,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "official_success": false,
+        "official_Q_final": 0.14285714285714285,
+        "official_Q_max": 0.14285714285714285,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.14285714285714285,
+        "steps": 20545,
+        "rollout_seconds": 4192.038342911001,
+        "whole_attempt_seconds": 4385.133777547002,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "electric_refrigerator.n.01_1/right": 78,
+          "plate.n.04_2/right": 756,
+          "plate.n.04_1/right": 5885,
+          "pizza.n.01_1/left": 51
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 544
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 2211
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 5377
+          },
+          {
+            "object": "pizza.n.01_1",
+            "arm": "left",
+            "native_step": 20449
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 622
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 2967
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 11262
+          },
+          {
+            "object": "pizza.n.01_1",
+            "arm": "left",
+            "native_step": 20500
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "pizza.n.01_1",
+          "plate.n.04_1",
+          "plate.n.04_2"
+        ],
+        "goal_object_centers": {
+          "bowl.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 2.6226043701171875e-06,
+            "max_displacement_m": 1.086636976310918e-05
+          },
+          "plate.n.04_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6513296365737915,
+            "max_displacement_m": 5.1421760883521825
+          },
+          "plate.n.04_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.4497296214103699,
+            "max_displacement_m": 2.420755137062063
+          },
+          "pizza.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.4480200409889221,
+            "max_displacement_m": 2.408114516636891
+          },
+          "bowl.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 3.635883331298828e-06,
+            "max_displacement_m": 1.4189911925720229e-05
+          },
+          "pizza.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6536731719970703,
+            "max_displacement_m": 5.12984035800337
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-four-task-paired-20261008T2145/task003-A0-original-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "f4a2e6de37552262ba788be2da288f00dd62435e28471156dbdc6471aab3b9e1",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 3,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "official_success": false,
+        "official_Q_final": 0.14285714285714285,
+        "official_Q_max": 0.14285714285714285,
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.14285714285714285,
+        "steps": 20545,
+        "rollout_seconds": 4374.961762631996,
+        "whole_attempt_seconds": 4583.4814071069995,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "electric_refrigerator.n.01_1/right": 97,
+          "plate.n.04_2/right": 1573,
+          "pizza.n.01_2/right": 1416
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 855
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 3093
+          },
+          {
+            "object": "pizza.n.01_2",
+            "arm": "right",
+            "native_step": 18325
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 952
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 4666
+          },
+          {
+            "object": "pizza.n.01_2",
+            "arm": "right",
+            "native_step": 19741
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "pizza.n.01_2",
+          "plate.n.04_2"
+        ],
+        "goal_object_centers": {
+          "plate.n.04_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.007704615592956543,
+            "max_displacement_m": 0.05804285684153209
+          },
+          "pizza.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7283198237419128,
+            "max_displacement_m": 2.4621580472392806
+          },
+          "plate.n.04_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7526280283927917,
+            "max_displacement_m": 2.4717073341080926
+          },
+          "pizza.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.007561087608337402,
+            "max_displacement_m": 0.06079594863494705
+          },
+          "bowl.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.048338890075683594,
+            "max_displacement_m": 0.10038422082725564
+          },
+          "bowl.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.06075841188430786,
+            "max_displacement_m": 0.120919165255787
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/ilia-four-task-paired-20261008T2145/task003-RT-EXPO-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "f4a2e6de37552262ba788be2da288f00dd62435e28471156dbdc6471aab3b9e1",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 3,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 20544,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.31306479000340914
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 20545,
+        "rollout_seconds": 4477.512451866001,
+        "whole_attempt_seconds": 4665.285418584997,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "electric_refrigerator.n.01_1/right": 98,
+          "plate.n.04_1/right": 6415
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 964
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 4049
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 1062
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 10464
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "plate.n.04_1"
+        ],
+        "goal_object_centers": {
+          "bowl.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 2.384185791015625e-07,
+            "max_displacement_m": 7.146594422970706e-06
+          },
+          "pizza.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6341502666473389,
+            "max_displacement_m": 5.339092726056956
+          },
+          "pizza.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 0.018396375278960007
+          },
+          "plate.n.04_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 3.3974647521972656e-06,
+            "max_displacement_m": 0.01843238270367433
+          },
+          "plate.n.04_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6492024064064026,
+            "max_displacement_m": 5.34883129535447
+          },
+          "bowl.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 3.5762786865234375e-07,
+            "max_displacement_m": 5.8196236562174e-06
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task003-A0-original-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "87bdccfd74ffe1e6ec0ed7e48ff61a850682e8264ac6461f48e3ef79540dbd83",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 3,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 20544,
+        "official_success": false,
+        "official_Q_final": 0.5714285714285714,
+        "official_Q_max": 0.5714285714285714,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.29876587499893503
+          },
+          {
+            "step": 5287,
+            "Q": 0.14285714285714285,
+            "wall_seconds": 1233.085481080001
+          },
+          {
+            "step": 10299,
+            "Q": 0.2857142857142857,
+            "wall_seconds": 2308.124999118998
+          },
+          {
+            "step": 17177,
+            "Q": 0.42857142857142855,
+            "wall_seconds": 3802.1740258469945
+          },
+          {
+            "step": 17743,
+            "Q": 0.5714285714285714,
+            "wall_seconds": 3922.9513302720006
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.5714285714285714,
+        "steps": 20545,
+        "rollout_seconds": 4538.4377952959985,
+        "whole_attempt_seconds": 4744.301110927001,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "electric_refrigerator.n.01_1/right": 125,
+          "plate.n.04_1/right": 1649,
+          "plate.n.04_2/right": 2607,
+          "bowl.n.01_2/right": 3192,
+          "bowl.n.01_1/left": 2006
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 793
+          },
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 1215
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 3783
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 7821
+          },
+          {
+            "object": "bowl.n.01_2",
+            "arm": "right",
+            "native_step": 14090
+          },
+          {
+            "object": "bowl.n.01_1",
+            "arm": "left",
+            "native_step": 15846
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 916
+          },
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 1217
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 5432
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 10428
+          },
+          {
+            "object": "bowl.n.01_2",
+            "arm": "right",
+            "native_step": 17282
+          },
+          {
+            "object": "bowl.n.01_1",
+            "arm": "left",
+            "native_step": 17852
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "bowl.n.01_1",
+          "bowl.n.01_2",
+          "plate.n.04_1",
+          "plate.n.04_2"
+        ],
+        "goal_object_centers": {
+          "bowl.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.5851820707321167,
+            "max_displacement_m": 3.7963465814022093
+          },
+          "bowl.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.4108962416648865,
+            "max_displacement_m": 3.9861693074883155
+          },
+          "pizza.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7061429619789124,
+            "max_displacement_m": 2.507808977939714
+          },
+          "pizza.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6620750427246094,
+            "max_displacement_m": 2.0350834017814
+          },
+          "plate.n.04_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7058388590812683,
+            "max_displacement_m": 2.516494111734782
+          },
+          "plate.n.04_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6629127860069275,
+            "max_displacement_m": 2.0136992392485573
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task003-RT-EXPO-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "87bdccfd74ffe1e6ec0ed7e48ff61a850682e8264ac6461f48e3ef79540dbd83",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 3,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 20544,
+        "official_success": true,
+        "official_Q_final": 1.0,
+        "official_Q_max": 1.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3156314830048359
+          },
+          {
+            "step": 2189,
+            "Q": 0.14285714285714285,
+            "wall_seconds": 535.6700518760044
+          },
+          {
+            "step": 5373,
+            "Q": 0.2857142857142857,
+            "wall_seconds": 1267.3208207310017
+          },
+          {
+            "step": 10072,
+            "Q": 0.42857142857142855,
+            "wall_seconds": 2352.444058603003
+          },
+          {
+            "step": 10534,
+            "Q": 1.0,
+            "wall_seconds": 2455.857558290001
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 1.0,
+        "steps": 10534,
+        "rollout_seconds": 2455.857558290001,
+        "whole_attempt_seconds": 2649.5070597270023,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "electric_refrigerator.n.01_1/right": 78,
+          "plate.n.04_2/right": 619,
+          "plate.n.04_1/right": 1414,
+          "bowl.n.01_1/left": 1450,
+          "bowl.n.01_2/right": 804
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 422
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 1622
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 4227
+          },
+          {
+            "object": "bowl.n.01_1",
+            "arm": "left",
+            "native_step": 9085
+          },
+          {
+            "object": "bowl.n.01_2",
+            "arm": "right",
+            "native_step": 9369
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 500
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 2241
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 5641
+          },
+          {
+            "object": "bowl.n.01_2",
+            "arm": "right",
+            "native_step": 10173
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "bowl.n.01_1",
+          "bowl.n.01_2",
+          "plate.n.04_1",
+          "plate.n.04_2"
+        ],
+        "goal_object_centers": {
+          "bowl.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.4049592614173889,
+            "max_displacement_m": 4.153392702543614
+          },
+          "pizza.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6794841885566711,
+            "max_displacement_m": 1.524980915040646
+          },
+          "plate.n.04_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.45457887649536133,
+            "max_displacement_m": 2.2954634021897133
+          },
+          "plate.n.04_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.67848140001297,
+            "max_displacement_m": 1.5422484532217964
+          },
+          "bowl.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.5224769115447998,
+            "max_displacement_m": 3.9390554943717007
+          },
+          "pizza.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.45000553131103516,
+            "max_displacement_m": 2.281719537058835
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task003-A0-original-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "243fa9b91d3d80f1fab21f906409e8fc9bd1edd9a4d1ed8eb141afae69a093e7",
+        "capture_alignment_verified": true,
+        "first_failed_stage": null
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 3,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 20544,
+        "official_success": false,
+        "official_Q_final": 0.2857142857142857,
+        "official_Q_max": 0.2857142857142857,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.28800593900086824
+          },
+          {
+            "step": 4627,
+            "Q": 0.14285714285714285,
+            "wall_seconds": 1409.336554182999
+          },
+          {
+            "step": 9558,
+            "Q": 0.2857142857142857,
+            "wall_seconds": 2617.540031977005
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.2857142857142857,
+        "steps": 20545,
+        "rollout_seconds": 5201.810511845004,
+        "whole_attempt_seconds": 5412.193964288999,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "electric_refrigerator.n.01_1/right": 70,
+          "plate.n.04_1/right": 1255,
+          "plate.n.04_2/right": 2236,
+          "bowl.n.01_2/right": 56
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 574
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 3452
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 7406
+          },
+          {
+            "object": "bowl.n.01_2",
+            "arm": "right",
+            "native_step": 20490
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "electric_refrigerator.n.01_1",
+            "arm": "right",
+            "native_step": 644
+          },
+          {
+            "object": "plate.n.04_1",
+            "arm": "right",
+            "native_step": 4707
+          },
+          {
+            "object": "plate.n.04_2",
+            "arm": "right",
+            "native_step": 9642
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "bowl.n.01_2",
+          "plate.n.04_1",
+          "plate.n.04_2"
+        ],
+        "goal_object_centers": {
+          "bowl.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0030205249786376953,
+            "max_displacement_m": 0.7166815173916046
+          },
+          "pizza.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6804205775260925,
+            "max_displacement_m": 2.726899040259941
+          },
+          "bowl.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 2.181529998779297e-05,
+            "max_displacement_m": 0.23726738943496165
+          },
+          "plate.n.04_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.46040940284729004,
+            "max_displacement_m": 2.8082533169959922
+          },
+          "pizza.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.4559251070022583,
+            "max_displacement_m": 2.7888008992753632
+          },
+          "plate.n.04_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6733358502388,
+            "max_displacement_m": 2.7194594923355084
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task003-RT-EXPO-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "243fa9b91d3d80f1fab21f906409e8fc9bd1edd9a4d1ed8eb141afae69a093e7",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 5,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 15294,
+        "official_success": false,
+        "official_Q_final": 0.3333333333333333,
+        "official_Q_max": 0.3333333333333333,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.28596894499787595
+          },
+          {
+            "step": 4103,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 732.7012708440016
+          },
+          {
+            "step": 4202,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 749.0047241159991
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.3333333333333333,
+        "steps": 15295,
+        "rollout_seconds": 2668.1737686920023,
+        "whole_attempt_seconds": 2808.937760416993,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "mousetrap.n.01_1/right": 2813,
+          "mousetrap.n.01_4/left": 1687
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "mousetrap.n.01_1",
+            "arm": "right",
+            "native_step": 1289
+          },
+          {
+            "object": "mousetrap.n.01_4",
+            "arm": "left",
+            "native_step": 2515
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "mousetrap.n.01_1",
+            "arm": "right",
+            "native_step": 4102
+          },
+          {
+            "object": "mousetrap.n.01_4",
+            "arm": "left",
+            "native_step": 4202
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "mousetrap.n.01_1",
+          "mousetrap.n.01_4"
+        ],
+        "goal_object_centers": {
+          "mousetrap.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 9.894371032714844e-06,
+            "max_displacement_m": 0.008842505597510174
+          },
+          "mousetrap.n.01_4": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.1872422695159912,
+            "max_displacement_m": 2.365780600865811
+          },
+          "mousetrap.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 2.0265579223632812e-06
+          },
+          "mousetrap.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.18809157609939575,
+            "max_displacement_m": 2.4056190194162945
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task005-A0-original-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "b3cac316264cd55443fe107f13392c9eafb65f5dbd69670179f313ca3b53965e",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 5,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 15294,
+        "official_success": false,
+        "official_Q_final": 0.16666666666666666,
+        "official_Q_max": 0.5,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.31906780599820195
+          },
+          {
+            "step": 10165,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2016.866024789997
+          },
+          {
+            "step": 10266,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2037.0801113779962
+          },
+          {
+            "step": 10274,
+            "Q": 0.0,
+            "wall_seconds": 2038.6337271209995
+          },
+          {
+            "step": 10276,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2039.0189000409955
+          },
+          {
+            "step": 10319,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2047.1767245599985
+          },
+          {
+            "step": 10395,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2061.7673046209966
+          },
+          {
+            "step": 10396,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2061.964644930995
+          },
+          {
+            "step": 10426,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2067.824550172998
+          },
+          {
+            "step": 10447,
+            "Q": 0.0,
+            "wall_seconds": 2071.637356471998
+          },
+          {
+            "step": 10710,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2121.544970680996
+          },
+          {
+            "step": 10711,
+            "Q": 0.0,
+            "wall_seconds": 2121.7328477409974
+          },
+          {
+            "step": 10866,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2149.957342278998
+          },
+          {
+            "step": 10980,
+            "Q": 0.0,
+            "wall_seconds": 2170.914259621997
+          },
+          {
+            "step": 10981,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2171.096865292995
+          },
+          {
+            "step": 11226,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2217.155847473994
+          },
+          {
+            "step": 11276,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2226.705853663996
+          },
+          {
+            "step": 11281,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2227.7639154930002
+          },
+          {
+            "step": 11299,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2231.1796707609974
+          },
+          {
+            "step": 11349,
+            "Q": 0.0,
+            "wall_seconds": 2240.538451992994
+          },
+          {
+            "step": 11356,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2241.9306591829954
+          },
+          {
+            "step": 11359,
+            "Q": 0.0,
+            "wall_seconds": 2242.461605974
+          },
+          {
+            "step": 11371,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2244.8693388119937
+          },
+          {
+            "step": 11397,
+            "Q": 0.0,
+            "wall_seconds": 2249.7393308249957
+          },
+          {
+            "step": 11431,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2255.9248171229992
+          },
+          {
+            "step": 11432,
+            "Q": 0.0,
+            "wall_seconds": 2256.0782390359964
+          },
+          {
+            "step": 11446,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2258.545884692998
+          },
+          {
+            "step": 11546,
+            "Q": 0.0,
+            "wall_seconds": 2277.0785062679934
+          },
+          {
+            "step": 11925,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2348.101395799
+          },
+          {
+            "step": 11926,
+            "Q": 0.0,
+            "wall_seconds": 2348.320792709994
+          },
+          {
+            "step": 11936,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2350.1162018439936
+          },
+          {
+            "step": 11941,
+            "Q": 0.0,
+            "wall_seconds": 2351.1601638199936
+          },
+          {
+            "step": 11943,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2351.5014261439937
+          },
+          {
+            "step": 11987,
+            "Q": 0.0,
+            "wall_seconds": 2360.0500146289996
+          },
+          {
+            "step": 12041,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2370.077054097994
+          },
+          {
+            "step": 12046,
+            "Q": 0.0,
+            "wall_seconds": 2371.1091364189997
+          },
+          {
+            "step": 12049,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2371.6510253710003
+          },
+          {
+            "step": 12061,
+            "Q": 0.0,
+            "wall_seconds": 2373.9093578760003
+          },
+          {
+            "step": 12065,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2374.5880520619976
+          },
+          {
+            "step": 12080,
+            "Q": 0.0,
+            "wall_seconds": 2377.264676465995
+          },
+          {
+            "step": 12372,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2431.711314614993
+          },
+          {
+            "step": 12421,
+            "Q": 0.0,
+            "wall_seconds": 2441.047764739
+          },
+          {
+            "step": 12424,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2441.584275374
+          },
+          {
+            "step": 12425,
+            "Q": 0.0,
+            "wall_seconds": 2441.7597054729995
+          },
+          {
+            "step": 12428,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2442.2788856219995
+          },
+          {
+            "step": 12436,
+            "Q": 0.0,
+            "wall_seconds": 2443.811413768999
+          },
+          {
+            "step": 12452,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2446.8726420599996
+          },
+          {
+            "step": 12498,
+            "Q": 0.0,
+            "wall_seconds": 2455.357105641
+          },
+          {
+            "step": 12523,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2460.1538463899997
+          },
+          {
+            "step": 12526,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2460.7288894749945
+          },
+          {
+            "step": 12529,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2461.2581232219964
+          },
+          {
+            "step": 12556,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2466.480545227998
+          },
+          {
+            "step": 12560,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2467.2376101269983
+          },
+          {
+            "step": 12571,
+            "Q": 0.5,
+            "wall_seconds": 2469.310362475
+          },
+          {
+            "step": 12616,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2477.7271509119964
+          },
+          {
+            "step": 12618,
+            "Q": 0.5,
+            "wall_seconds": 2478.082530408996
+          },
+          {
+            "step": 12619,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2478.257002252998
+          },
+          {
+            "step": 12640,
+            "Q": 0.5,
+            "wall_seconds": 2482.1070896349993
+          },
+          {
+            "step": 12641,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2482.2675813909955
+          },
+          {
+            "step": 12650,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2483.9281131939933
+          },
+          {
+            "step": 12661,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2485.922997984999
+          },
+          {
+            "step": 12663,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2486.2728727539943
+          },
+          {
+            "step": 12763,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2504.445700663993
+          },
+          {
+            "step": 12796,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2510.4412455839993
+          },
+          {
+            "step": 12894,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2528.671449706999
+          },
+          {
+            "step": 12901,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2530.060802600994
+          },
+          {
+            "step": 12902,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2530.2512092629986
+          },
+          {
+            "step": 12973,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2543.8423085429968
+          },
+          {
+            "step": 12976,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2544.3863263589956
+          },
+          {
+            "step": 13030,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2554.3743969539937
+          },
+          {
+            "step": 13066,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2560.8757552419993
+          },
+          {
+            "step": 13068,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2561.1958816579936
+          },
+          {
+            "step": 13080,
+            "Q": 0.5,
+            "wall_seconds": 2563.264091083998
+          },
+          {
+            "step": 13081,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2563.437653643996
+          },
+          {
+            "step": 13111,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2569.0337933489936
+          },
+          {
+            "step": 13134,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2573.188014622996
+          },
+          {
+            "step": 14491,
+            "Q": 0.5,
+            "wall_seconds": 2826.5764683639936
+          },
+          {
+            "step": 14812,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2885.9469751869983
+          },
+          {
+            "step": 14821,
+            "Q": 0.5,
+            "wall_seconds": 2887.749806396998
+          },
+          {
+            "step": 14824,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2888.258801459997
+          },
+          {
+            "step": 14836,
+            "Q": 0.5,
+            "wall_seconds": 2890.4030735689958
+          },
+          {
+            "step": 14851,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2893.023527380996
+          },
+          {
+            "step": 15048,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2930.1648063079992
+          },
+          {
+            "step": 15093,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2938.505864464998
+          },
+          {
+            "step": 15124,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2944.425066441996
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.16666666666666666,
+        "steps": 15295,
+        "rollout_seconds": 2976.7927295909976,
+        "whole_attempt_seconds": 3091.4024805949957,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "mousetrap.n.01_1/right": 12814,
+          "mousetrap.n.01_3/left": 6544
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "mousetrap.n.01_1",
+            "arm": "right",
+            "native_step": 2482
+          },
+          {
+            "object": "mousetrap.n.01_3",
+            "arm": "left",
+            "native_step": 8752
+          }
+        ],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [
+          "mousetrap.n.01_1",
+          "mousetrap.n.01_3"
+        ],
+        "goal_object_centers": {
+          "mousetrap.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 3.1831335837408756e-06
+          },
+          "mousetrap.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.02353036403656006,
+            "max_displacement_m": 4.120323823229077
+          },
+          "mousetrap.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.05262589454650879,
+            "max_displacement_m": 4.286150405682848
+          },
+          "mousetrap.n.01_4": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 8.344650268554688e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task005-RT-EXPO-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "b3cac316264cd55443fe107f13392c9eafb65f5dbd69670179f313ca3b53965e",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 5,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 15294,
+        "official_success": true,
+        "official_Q_final": 1.0,
+        "official_Q_max": 1.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.2675873429980129
+          },
+          {
+            "step": 3059,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 553.5736713980004
+          },
+          {
+            "step": 3065,
+            "Q": 0.0,
+            "wall_seconds": 554.6495880959992
+          },
+          {
+            "step": 3321,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 597.668736823005
+          },
+          {
+            "step": 3323,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 597.9971963799981
+          },
+          {
+            "step": 3524,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 630.4674028010049
+          },
+          {
+            "step": 3525,
+            "Q": 0.0,
+            "wall_seconds": 630.6026801070038
+          },
+          {
+            "step": 3530,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 631.2865101429998
+          },
+          {
+            "step": 3536,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 632.1513133260014
+          },
+          {
+            "step": 3550,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 634.3253326170015
+          },
+          {
+            "step": 3562,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 636.2935246550041
+          },
+          {
+            "step": 3683,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 655.2796869529993
+          },
+          {
+            "step": 3886,
+            "Q": 0.0,
+            "wall_seconds": 688.8117851880015
+          },
+          {
+            "step": 3967,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 702.5844445879993
+          },
+          {
+            "step": 4050,
+            "Q": 0.0,
+            "wall_seconds": 715.8687696990019
+          },
+          {
+            "step": 4064,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 718.0709803520003
+          },
+          {
+            "step": 4076,
+            "Q": 0.0,
+            "wall_seconds": 719.886113833003
+          },
+          {
+            "step": 4141,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 730.5594774780038
+          },
+          {
+            "step": 4143,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 730.8661847050025
+          },
+          {
+            "step": 4189,
+            "Q": 0.5,
+            "wall_seconds": 738.7809144920029
+          },
+          {
+            "step": 4199,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 740.3561521560041
+          },
+          {
+            "step": 4297,
+            "Q": 0.5,
+            "wall_seconds": 756.1357989230019
+          },
+          {
+            "step": 4479,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 785.2264582600037
+          },
+          {
+            "step": 12188,
+            "Q": 0.8333333333333334,
+            "wall_seconds": 2065.3278574880023
+          },
+          {
+            "step": 12584,
+            "Q": 1.0,
+            "wall_seconds": 2133.2433172910023
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 1.0,
+        "steps": 12584,
+        "rollout_seconds": 2133.2433172910023,
+        "whole_attempt_seconds": 2233.043023407001,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "mousetrap.n.01_2/left": 3426,
+          "mousetrap.n.01_1/right": 2175,
+          "mousetrap.n.01_3/right": 6437,
+          "mousetrap.n.01_4/left": 6240
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "mousetrap.n.01_2",
+            "arm": "left",
+            "native_step": 1053
+          },
+          {
+            "object": "mousetrap.n.01_1",
+            "arm": "right",
+            "native_step": 2268
+          },
+          {
+            "object": "mousetrap.n.01_3",
+            "arm": "right",
+            "native_step": 6025
+          },
+          {
+            "object": "mousetrap.n.01_4",
+            "arm": "left",
+            "native_step": 6342
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "mousetrap.n.01_1",
+            "arm": "right",
+            "native_step": 4443
+          },
+          {
+            "object": "mousetrap.n.01_2",
+            "arm": "left",
+            "native_step": 4479
+          },
+          {
+            "object": "mousetrap.n.01_3",
+            "arm": "right",
+            "native_step": 12462
+          },
+          {
+            "object": "mousetrap.n.01_4",
+            "arm": "left",
+            "native_step": 12582
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "mousetrap.n.01_1",
+          "mousetrap.n.01_2",
+          "mousetrap.n.01_3",
+          "mousetrap.n.01_4"
+        ],
+        "goal_object_centers": {
+          "mousetrap.n.01_4": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.08164030313491821,
+            "max_displacement_m": 2.4498087709216305
+          },
+          "mousetrap.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.15450900793075562,
+            "max_displacement_m": 2.591074584995114
+          },
+          "mousetrap.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.052912235260009766,
+            "max_displacement_m": 4.03677266536367
+          },
+          "mousetrap.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.24831873178482056,
+            "max_displacement_m": 4.211409371486621
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task005-A0-original-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "a17c7ef4737744d081a0bfe5eef5deccc0cfec32eae318fcf71c807fe7a79bdf",
+        "capture_alignment_verified": true,
+        "first_failed_stage": null
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 5,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 15294,
+        "official_success": false,
+        "official_Q_final": 0.5,
+        "official_Q_max": 0.5,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3030070750028244
+          },
+          {
+            "step": 4247,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 843.8941575529971
+          },
+          {
+            "step": 4250,
+            "Q": 0.0,
+            "wall_seconds": 844.3928721229968
+          },
+          {
+            "step": 4584,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 903.7585471880011
+          },
+          {
+            "step": 4617,
+            "Q": 0.0,
+            "wall_seconds": 909.8822230349979
+          },
+          {
+            "step": 4874,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 956.2500944019994
+          },
+          {
+            "step": 4876,
+            "Q": 0.0,
+            "wall_seconds": 956.6097576129978
+          },
+          {
+            "step": 4894,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 959.8505765009977
+          },
+          {
+            "step": 5079,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 993.2443771050021
+          },
+          {
+            "step": 5101,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 997.2576023360016
+          },
+          {
+            "step": 5466,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 1061.034540710003
+          },
+          {
+            "step": 5474,
+            "Q": 0.5,
+            "wall_seconds": 1062.7009156749991
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.5,
+        "steps": 15295,
+        "rollout_seconds": 2886.4722235279987,
+        "whole_attempt_seconds": 3001.2566257470025,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "mousetrap.n.01_1/right": 3726,
+          "mousetrap.n.01_2/left": 2178,
+          "mousetrap.n.01_4/left": 7131
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "mousetrap.n.01_1",
+            "arm": "right",
+            "native_step": 1735
+          },
+          {
+            "object": "mousetrap.n.01_2",
+            "arm": "left",
+            "native_step": 3295
+          },
+          {
+            "object": "mousetrap.n.01_4",
+            "arm": "left",
+            "native_step": 8165
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "mousetrap.n.01_1",
+            "arm": "right",
+            "native_step": 5461
+          },
+          {
+            "object": "mousetrap.n.01_2",
+            "arm": "left",
+            "native_step": 5473
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "mousetrap.n.01_1",
+          "mousetrap.n.01_2",
+          "mousetrap.n.01_4"
+        ],
+        "goal_object_centers": {
+          "mousetrap.n.01_4": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.1994076371192932,
+            "max_displacement_m": 0.5083185172286978
+          },
+          "mousetrap.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.11215567588806152,
+            "max_displacement_m": 4.002977510392433
+          },
+          "mousetrap.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 1.8668722824294359e-06
+          },
+          "mousetrap.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0626533031463623,
+            "max_displacement_m": 4.136642854359383
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task005-RT-EXPO-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "a17c7ef4737744d081a0bfe5eef5deccc0cfec32eae318fcf71c807fe7a79bdf",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 5,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 15294,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.25825192099728156
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 15295,
+        "rollout_seconds": 2861.123514685998,
+        "whole_attempt_seconds": 2959.3487522330033,
+        "native_goal_grasp": false,
+        "native_grasp_steps": {},
+        "native_grasp_onsets": [],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [],
+        "goal_object_centers": {
+          "mousetrap.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 5.960464477539063e-08
+          },
+          "mousetrap.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.7881393432617188e-07,
+            "max_displacement_m": 7.177349673981843e-07
+          },
+          "mousetrap.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 2.384185791015625e-07
+          },
+          "mousetrap.n.01_4": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.1920928955078125e-07,
+            "max_displacement_m": 2.6656007498500226e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task005-A0-original-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "4820e47625b43e379a5ec9de37b86eb15391e28d25a1fd35d97068c583c05b9f",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "goal-object grasp unconfirmed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 5,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 15294,
+        "official_success": false,
+        "official_Q_final": 0.6666666666666666,
+        "official_Q_max": 0.6666666666666666,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3052674790014862
+          },
+          {
+            "step": 9820,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1841.2314530710064
+          },
+          {
+            "step": 9823,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 1841.8214816189939
+          },
+          {
+            "step": 9858,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1847.922906786007
+          },
+          {
+            "step": 9859,
+            "Q": 0.0,
+            "wall_seconds": 1848.085500951005
+          },
+          {
+            "step": 10288,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1923.4492491019992
+          },
+          {
+            "step": 10297,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 1924.9636807739953
+          },
+          {
+            "step": 10501,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1961.009784151007
+          },
+          {
+            "step": 10509,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 1962.4032579289997
+          },
+          {
+            "step": 10513,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1963.2224349700045
+          },
+          {
+            "step": 10648,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 1987.5105311570005
+          },
+          {
+            "step": 11776,
+            "Q": 0.5,
+            "wall_seconds": 2187.8383853189953
+          },
+          {
+            "step": 11780,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2188.4911368200046
+          },
+          {
+            "step": 11791,
+            "Q": 0.5,
+            "wall_seconds": 2190.502058708
+          },
+          {
+            "step": 13934,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 2613.991394560995
+          },
+          {
+            "step": 13936,
+            "Q": 0.5,
+            "wall_seconds": 2614.3706246739966
+          },
+          {
+            "step": 13983,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 2623.605650206002
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.6666666666666666,
+        "steps": 15295,
+        "rollout_seconds": 2875.801921212995,
+        "whole_attempt_seconds": 2988.2909039919905,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "mousetrap.n.01_3/left": 10246,
+          "mousetrap.n.01_4/right": 4551
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "mousetrap.n.01_3",
+            "arm": "left",
+            "native_step": 3737
+          },
+          {
+            "object": "mousetrap.n.01_4",
+            "arm": "right",
+            "native_step": 7450
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "mousetrap.n.01_4",
+            "arm": "right",
+            "native_step": 12001
+          },
+          {
+            "object": "mousetrap.n.01_3",
+            "arm": "left",
+            "native_step": 13983
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "mousetrap.n.01_3",
+          "mousetrap.n.01_4"
+        ],
+        "goal_object_centers": {
+          "mousetrap.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 7.402503345613491e-06
+          },
+          "mousetrap.n.01_4": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.03218984603881836,
+            "max_displacement_m": 4.36233872803787
+          },
+          "mousetrap.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.08192604780197144,
+            "max_displacement_m": 4.233013174879102
+          },
+          "mousetrap.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.7940998077392578e-05,
+            "max_displacement_m": 0.015271418373319816
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task005-RT-EXPO-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "4820e47625b43e379a5ec9de37b86eb15391e28d25a1fd35d97068c583c05b9f",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 7,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 28335,
+        "official_success": false,
+        "official_Q_final": 0.3333333333333333,
+        "official_Q_max": 0.3333333333333333,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.29891023100935854
+          },
+          {
+            "step": 6664,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2244.867667892002
+          },
+          {
+            "step": 28183,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 8774.644190895997
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.3333333333333333,
+        "steps": 28336,
+        "rollout_seconds": 8821.892758735004,
+        "whole_attempt_seconds": 9288.96767138,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "jigsaw_puzzle.n.01_2/left": 6,
+          "jigsaw_puzzle.n.01_2/right": 952,
+          "board_game.n.01_1/left": 98,
+          "board_game.n.01_1/right": 2062
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "left",
+            "native_step": 658
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "right",
+            "native_step": 5710
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 8291
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 26119
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "left",
+            "native_step": 664
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "right",
+            "native_step": 6662
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 8389
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 28181
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "board_game.n.01_1",
+          "jigsaw_puzzle.n.01_2"
+        ],
+        "goal_object_centers": {
+          "board_game.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 1.1920928955078125e-07
+          },
+          "tennis_ball.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 2.384185791015625e-07,
+            "max_displacement_m": 4.617298342968227e-05
+          },
+          "board_game.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.7881393432617188e-07,
+            "max_displacement_m": 1.9157121992097135e-06
+          },
+          "board_game.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.6191384792327881,
+            "max_displacement_m": 2.1020448615632783
+          },
+          "jigsaw_puzzle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.3547874093055725,
+            "max_displacement_m": 0.6915801355666921
+          },
+          "jigsaw_puzzle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 2.6703479560032715e-05
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task007-A0-original-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "c033d074589d33beac6bb84736b76169361887ceb3aa1d52ec34b1838a6519a0",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 7,
+        "instance": 301,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 28335,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3783708730043145
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 28336,
+        "rollout_seconds": 7294.284275743004,
+        "whole_attempt_seconds": 7594.238932990003,
+        "native_goal_grasp": false,
+        "native_grasp_steps": {},
+        "native_grasp_onsets": [],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [],
+        "goal_object_centers": {
+          "jigsaw_puzzle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 0.0
+          },
+          "tennis_ball.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.7881393432617188e-07,
+            "max_displacement_m": 7.872327318715599e-06
+          },
+          "board_game.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 5.960464477539063e-08
+          },
+          "board_game.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 1.1920928955078125e-07
+          },
+          "board_game.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.7881393432617188e-07,
+            "max_displacement_m": 1.9157121992097135e-06
+          },
+          "jigsaw_puzzle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 1.1920928955078125e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task007-RT-EXPO-instance301-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "c033d074589d33beac6bb84736b76169361887ceb3aa1d52ec34b1838a6519a0",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "goal-object grasp unconfirmed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 7,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 28335,
+        "official_success": false,
+        "official_Q_final": 0.8333333333333334,
+        "official_Q_max": 0.8333333333333334,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.31512308899255004
+          },
+          {
+            "step": 8295,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1921.8712820569926
+          },
+          {
+            "step": 9949,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2317.8607428770047
+          },
+          {
+            "step": 10050,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 2342.4571933169937
+          },
+          {
+            "step": 10126,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 2360.151280303995
+          },
+          {
+            "step": 11173,
+            "Q": 0.5,
+            "wall_seconds": 2606.7325486229965
+          },
+          {
+            "step": 11853,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 2767.2636737239955
+          },
+          {
+            "step": 11902,
+            "Q": 0.5,
+            "wall_seconds": 2779.609235662996
+          },
+          {
+            "step": 11904,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 2780.257559990001
+          },
+          {
+            "step": 11932,
+            "Q": 0.5,
+            "wall_seconds": 2786.2745639789937
+          },
+          {
+            "step": 11933,
+            "Q": 0.6666666666666666,
+            "wall_seconds": 2786.4690558059956
+          },
+          {
+            "step": 13466,
+            "Q": 0.8333333333333334,
+            "wall_seconds": 3151.7303770939907
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.8333333333333334,
+        "steps": 28336,
+        "rollout_seconds": 6647.888884058004,
+        "whole_attempt_seconds": 6913.653826225011,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "board_game.n.01_1/left": 38,
+          "board_game.n.01_1/right": 1424,
+          "board_game.n.01_3/right": 3,
+          "board_game.n.01_3/left": 854,
+          "jigsaw_puzzle.n.01_2/right": 430,
+          "tennis_ball.n.01_1/right": 269,
+          "jigsaw_puzzle.n.01_1/right": 323
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4453
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4471
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4496
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4543
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4575
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 6870
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 8898
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "left",
+            "native_step": 9338
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "right",
+            "native_step": 10777
+          },
+          {
+            "object": "tennis_ball.n.01_1",
+            "arm": "right",
+            "native_step": 11632
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_1",
+            "arm": "right",
+            "native_step": 13139
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4461
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4481
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4499
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4554
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "left",
+            "native_step": 4581
+          },
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 8294
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 8901
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "left",
+            "native_step": 10192
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "right",
+            "native_step": 11207
+          },
+          {
+            "object": "tennis_ball.n.01_1",
+            "arm": "right",
+            "native_step": 11901
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_1",
+            "arm": "right",
+            "native_step": 13462
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "board_game.n.01_1",
+          "board_game.n.01_3",
+          "jigsaw_puzzle.n.01_1",
+          "jigsaw_puzzle.n.01_2",
+          "tennis_ball.n.01_1"
+        ],
+        "goal_object_centers": {
+          "board_game.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.2483285665512085,
+            "max_displacement_m": 0.6034935154866894
+          },
+          "jigsaw_puzzle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.24567246437072754,
+            "max_displacement_m": 0.6603830840506343
+          },
+          "board_game.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.1920928955078125e-07,
+            "max_displacement_m": 7.25209005094007e-05
+          },
+          "board_game.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.9111425876617432,
+            "max_displacement_m": 2.010656522873701
+          },
+          "jigsaw_puzzle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.3207905888557434,
+            "max_displacement_m": 0.559633741540444
+          },
+          "tennis_ball.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.2595369815826416,
+            "max_displacement_m": 0.6438961373858834
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task007-A0-original-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "02a7ddf451f166518c4e73164a17c9aecc01f14f857aa0dba2c188a12c700fc8",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 7,
+        "instance": 23,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 28335,
+        "official_success": false,
+        "official_Q_final": 0.16666666666666666,
+        "official_Q_max": 0.16666666666666666,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3051865790039301
+          },
+          {
+            "step": 19570,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 6507.061818176997
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.16666666666666666,
+        "steps": 28336,
+        "rollout_seconds": 9488.444613785003,
+        "whole_attempt_seconds": 9769.947563794994,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "board_game.n.01_1/right": 8357,
+          "board_game.n.01_3/right": 24
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 11429
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 24848
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 24932
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 19786
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 24871
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 24933
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "board_game.n.01_1",
+          "board_game.n.01_3"
+        ],
+        "goal_object_centers": {
+          "board_game.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.030214309692382812,
+            "max_displacement_m": 0.5843713440362739
+          },
+          "tennis_ball.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539062e-07,
+            "max_displacement_m": 6.748912090775767e-05
+          },
+          "board_game.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7252366542816162,
+            "max_displacement_m": 2.0405071581461547
+          },
+          "jigsaw_puzzle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 5.531339938195121e-05
+          },
+          "board_game.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.1920928955078125e-07,
+            "max_displacement_m": 7.25209005094007e-05
+          },
+          "jigsaw_puzzle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 2.384185791015625e-07,
+            "max_displacement_m": 2.384185791015625e-07
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task007-RT-EXPO-instance23-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "02a7ddf451f166518c4e73164a17c9aecc01f14f857aa0dba2c188a12c700fc8",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 7,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "A0-original",
+        "budget_steps": 28335,
+        "official_success": false,
+        "official_Q_final": 0.5,
+        "official_Q_max": 0.5,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.3022498249920318
+          },
+          {
+            "step": 7898,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1917.5967205719935
+          },
+          {
+            "step": 7925,
+            "Q": 0.0,
+            "wall_seconds": 1923.571674701001
+          },
+          {
+            "step": 7933,
+            "Q": 0.16666666666666666,
+            "wall_seconds": 1925.4748244840011
+          },
+          {
+            "step": 22425,
+            "Q": 0.3333333333333333,
+            "wall_seconds": 5302.85332650799
+          },
+          {
+            "step": 24341,
+            "Q": 0.5,
+            "wall_seconds": 5764.5882536889985
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.5,
+        "steps": 28336,
+        "rollout_seconds": 6732.60554331899,
+        "whole_attempt_seconds": 7001.604021851992,
+        "native_goal_grasp": true,
+        "native_grasp_steps": {
+          "board_game.n.01_1/right": 749,
+          "board_game.n.01_2/left": 4533,
+          "board_game.n.01_2/right": 6544,
+          "jigsaw_puzzle.n.01_2/left": 409,
+          "board_game.n.01_3/right": 5
+        },
+        "native_grasp_onsets": [
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 7233
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "left",
+            "native_step": 10835
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "right",
+            "native_step": 15877
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "left",
+            "native_step": 16115
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "left",
+            "native_step": 16905
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "left",
+            "native_step": 23928
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 25375
+          }
+        ],
+        "native_grasp_release_predicate_steps": [
+          {
+            "object": "board_game.n.01_1",
+            "arm": "right",
+            "native_step": 7982
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "left",
+            "native_step": 10838
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "left",
+            "native_step": 16788
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "left",
+            "native_step": 20762
+          },
+          {
+            "object": "board_game.n.01_2",
+            "arm": "right",
+            "native_step": 22421
+          },
+          {
+            "object": "jigsaw_puzzle.n.01_2",
+            "arm": "left",
+            "native_step": 24337
+          },
+          {
+            "object": "board_game.n.01_3",
+            "arm": "right",
+            "native_step": 25380
+          }
+        ],
+        "native_goal_objects_grasped": [
+          "board_game.n.01_1",
+          "board_game.n.01_2",
+          "board_game.n.01_3",
+          "jigsaw_puzzle.n.01_2"
+        ],
+        "goal_object_centers": {
+          "jigsaw_puzzle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.7881393432617188e-07,
+            "max_displacement_m": 2.0981173620958682e-05
+          },
+          "board_game.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.02053976058959961,
+            "max_displacement_m": 0.19330454711108738
+          },
+          "jigsaw_puzzle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.2965552806854248,
+            "max_displacement_m": 0.9315156489745978
+          },
+          "board_game.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.7904438972473145,
+            "max_displacement_m": 3.281546638978531
+          },
+          "board_game.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.674671471118927,
+            "max_displacement_m": 3.190547847489043
+          },
+          "tennis_ball.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.364418029785156e-07,
+            "max_displacement_m": 1.538169431998303e-05
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task007-A0-original-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "85b161adc3e70ec014fb78186c30f3e6216f891b2dcad5a37ca7e0d32f5ca5d9",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "grasp confirmed; official full goal not completed"
+      },
+      {
+        "timeout_regime": "full",
+        "task_id": 7,
+        "instance": 24,
+        "environment_seed": 0,
+        "inference_seed": 0,
+        "condition": "RT-EXPO",
+        "budget_steps": 28335,
+        "official_success": false,
+        "official_Q_final": 0.0,
+        "official_Q_max": 0.0,
+        "official_Q_changes": [
+          {
+            "step": 0,
+            "Q": 0.0,
+            "wall_seconds": 0.29657056799624115
+          }
+        ],
+        "official_Q_first_recorded_step": 0.0,
+        "official_Q_gain_from_first_recorded_step": 0.0,
+        "steps": 28336,
+        "rollout_seconds": 6172.666841551996,
+        "whole_attempt_seconds": 6458.245396144994,
+        "native_goal_grasp": false,
+        "native_grasp_steps": {},
+        "native_grasp_onsets": [],
+        "native_grasp_release_predicate_steps": [],
+        "native_goal_objects_grasped": [],
+        "goal_object_centers": {
+          "board_game.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.02349674701690674,
+            "max_displacement_m": 1.1682578878151406
+          },
+          "board_game.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 5.960464477539063e-08,
+            "max_displacement_m": 5.960464477539063e-08
+          },
+          "jigsaw_puzzle.n.01_2": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.1920928955078125e-07,
+            "max_displacement_m": 1.1920928955078125e-07
+          },
+          "tennis_ball.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 3.5762786865234375e-07,
+            "max_displacement_m": 9.53692942675847e-06
+          },
+          "board_game.n.01_3": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 0.0,
+            "max_displacement_m": 1.7881393432617188e-07
+          },
+          "jigsaw_puzzle.n.01_1": {
+            "reference": "first recorded event; not reset pose or marker",
+            "max_height_delta_m": 1.1920928955078125e-07,
+            "max_displacement_m": 1.9110702922202824e-06
+          }
+        },
+        "button_contact_seconds": null,
+        "reused_prior_pair": false,
+        "full_output": "/home/shadeform/workspace/behavior/outputs/five-task-20261009/task007-RT-EXPO-instance24-seed0",
+        "baseline_origin": "released2025 native Ilia task-correct group",
+        "initial_proprio_sha256": "85b161adc3e70ec014fb78186c30f3e6216f891b2dcad5a37ca7e0d32f5ca5d9",
+        "capture_alignment_verified": true,
+        "first_failed_stage": "goal-object grasp unconfirmed"
+      }
+    ]
+  },
+  "submission12": {
+    "planned": 12,
+    "completed": 12,
+    "rows": [
+      {
+        "task_id": 2,
+        "public_index": 0,
+        "key": "task002-public0-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.5714285714285714,
+        "steps": 20683
+      },
+      {
+        "task_id": 2,
+        "public_index": 1,
+        "key": "task002-public1-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.7142857142857143,
+        "steps": 20683
+      },
+      {
+        "task_id": 2,
+        "public_index": 2,
+        "key": "task002-public2-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.5714285714285714,
+        "steps": 20683
+      },
+      {
+        "task_id": 2,
+        "public_index": 3,
+        "key": "task002-public3-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.0,
+        "steps": 20683
+      },
+      {
+        "task_id": 1,
+        "public_index": 0,
+        "key": "task001-public0-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.0,
+        "steps": 7902
+      },
+      {
+        "task_id": 1,
+        "public_index": 1,
+        "key": "task001-public1-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.0,
+        "steps": 7902
+      },
+      {
+        "task_id": 1,
+        "public_index": 2,
+        "key": "task001-public2-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.0,
+        "steps": 7902
+      },
+      {
+        "task_id": 1,
+        "public_index": 3,
+        "key": "task001-public3-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.0,
+        "steps": 7902
+      },
+      {
+        "task_id": 5,
+        "public_index": 0,
+        "key": "task005-public0-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.0,
+        "steps": 15295
+      },
+      {
+        "task_id": 5,
+        "public_index": 1,
+        "key": "task005-public1-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.5,
+        "steps": 15295
+      },
+      {
+        "task_id": 5,
+        "public_index": 2,
+        "key": "task005-public2-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.0,
+        "steps": 15295
+      },
+      {
+        "task_id": 5,
+        "public_index": 3,
+        "key": "task005-public3-seed0",
+        "status": "complete",
+        "success": false,
+        "Q_final": 0.3333333333333333,
+        "steps": 15295
+      }
+    ],
+    "portal_submitted": false
+  },
+  "authors_confirmed": false,
+  "arxiv_submitted": false
+}

@@ -1,0 +1,22 @@
+{
+  "verified_utc": "2026-10-11T06:15:01.355847+00:00",
+  "official_revision": "bd049de3119acdcdf2334fe9e1ebe060fa20c108",
+  "robot_matches_stock": true,
+  "files": [
+    {
+      "path": "rgbd_full_res_wrapper.py",
+      "sha256": "22056ef420e2fc8f7ea546f8316f8ca9120e236a1b65da3f577fab7abcc4bb19",
+      "matches_pinned_official_source": true
+    },
+    {
+      "path": "default_wrapper.py",
+      "sha256": "069fbfdc4387c45da528ac05fade4a99c1428e0544fde4183e443ec4181673eb",
+      "matches_pinned_official_source": true
+    },
+    {
+      "path": "__init__.py",
+      "sha256": "e1cb29ee9176217cf31fa6fead0fac98b26ed233e460d549a677583326f45d59",
+      "matches_pinned_official_source": true
+    }
+  ]
+}

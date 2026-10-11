@@ -1,0 +1,13 @@
+key,task_id,task_name,public_index,native_instance_id,seed,success,official_Q_final,steps
+task002-public0-seed0,2,putting_away_Halloween_decorations,0,301,0,False,0.5714285714285714,20683
+task002-public1-seed0,2,putting_away_Halloween_decorations,1,302,0,False,0.7142857142857143,20683
+task002-public2-seed0,2,putting_away_Halloween_decorations,2,303,0,False,0.5714285714285714,20683
+task002-public3-seed0,2,putting_away_Halloween_decorations,3,304,0,False,0.0,20683
+task001-public0-seed0,1,picking_up_trash,0,301,0,False,0.0,7902
+task001-public1-seed0,1,picking_up_trash,1,302,0,False,0.0,7902
+task001-public2-seed0,1,picking_up_trash,2,303,0,False,0.0,7902
+task001-public3-seed0,1,picking_up_trash,3,304,0,False,0.0,7902
+task005-public0-seed0,5,setting_mousetraps,0,301,0,False,0.0,15295
+task005-public1-seed0,5,setting_mousetraps,1,302,0,False,0.5,15295
+task005-public2-seed0,5,setting_mousetraps,2,303,0,False,0.0,15295
+task005-public3-seed0,5,setting_mousetraps,3,304,0,False,0.3333333333333333,15295

@@ -1,0 +1,18 @@
+# All 12 original final-panel videos
+
+Task/public index/native ID identify each unchanged MP4. No login is required. SHA256 is from the original evaluation output.
+
+| Task | Public index | Native ID | Original MP4 | SHA256 |
+|---|---:|---:|---|---|
+| 001 | 0 | 301 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task001-public0-seed0/raw/videos/picking_up_trash_301_0.mp4?download=true) | `a0ce8f666831747ea77bda6f75d1e9b1b27429f226eb24a218b6e592e40a25cc` |
+| 001 | 1 | 302 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task001-public1-seed0/raw/videos/picking_up_trash_302_0.mp4?download=true) | `97535b666fcf1294a99c2203bd7fd96df1d3bbaa257c356cfa416693266b5954` |
+| 001 | 2 | 303 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task001-public2-seed0/raw/videos/picking_up_trash_303_0.mp4?download=true) | `fb5459babf17fb4398682c1e810c75c215978f1fda48410bf00ad153f88318a8` |
+| 001 | 3 | 304 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task001-public3-seed0/raw/videos/picking_up_trash_304_0.mp4?download=true) | `bd1aa69747f4179204341eebf46560613e66649e28b79ac717de616f81ff1103` |
+| 002 | 0 | 301 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task002-public0-seed0/raw/videos/putting_away_Halloween_decorations_301_0.mp4?download=true) | `509fc35e80c5e58420a04ba1f12a78f1eee732e27e66f9c290ac219180b1de71` |
+| 002 | 1 | 302 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task002-public1-seed0/raw/videos/putting_away_Halloween_decorations_302_0.mp4?download=true) | `467d0d56ecdbca5cd5b24b957b86824c5f0b53f6b55e0f9970b948a6444b3816` |
+| 002 | 2 | 303 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task002-public2-seed0/raw/videos/putting_away_Halloween_decorations_303_0.mp4?download=true) | `df02428494a70eed68608acea3d1bb72129722a7b45f43b54beca217a75af7e0` |
+| 002 | 3 | 304 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task002-public3-seed0/raw/videos/putting_away_Halloween_decorations_304_0.mp4?download=true) | `e2b24f0c5748878639700a8e60f0937c7b67353395d9bcbad820a89def7966e1` |
+| 005 | 0 | 301 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task005-public0-seed0/raw/videos/setting_mousetraps_301_0.mp4?download=true) | `6c79acae7f54f95c52d528428a706e8482b0c9f6cdbb83ebddf9f73ba710da74` |
+| 005 | 1 | 302 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task005-public1-seed0/raw/videos/setting_mousetraps_302_0.mp4?download=true) | `181ef3fd8e1c01c375691444ad3b90ad0ca1f72490f6f8c61ae6ea5bb9322be2` |
+| 005 | 2 | 303 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task005-public2-seed0/raw/videos/setting_mousetraps_303_0.mp4?download=true) | `ead7a0e05f2261010b2053a553dfc70ac58383cd7e06287b68612c0be561f4c7` |
+| 005 | 3 | 304 | [Download](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/rollouts/task005-public3-seed0/raw/videos/setting_mousetraps_304_0.mp4?download=true) | `71e69403c10e51739b9e8fe29c3e3ca08b178872ceaebd1197f1be2d0f2575d4` |

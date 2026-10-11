@@ -1,0 +1,25 @@
+{
+  "task": "putting_away_Halloween_decorations",
+  "instance_id": 304,
+  "rollout_id": 0,
+  "steps": 20683,
+  "success": false,
+  "agent_distance": {
+    "base": 11.137127606127478,
+    "left": 29.56115966951006,
+    "right": 31.442123500025446
+  },
+  "normalized_agent_distance": {
+    "base": 4.232267211706084,
+    "left": 0.6721522505253364,
+    "right": 0.6457515504633002
+  },
+  "q_score": {
+    "final": 0.0
+  },
+  "time": {
+    "simulator_steps": 20683,
+    "simulator_time": 689.4333333333333,
+    "normalized_time": 0.666637335009428
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "candidate_pending_user_review",
+  "self_evaluation_authorized": false,
+  "policy_seed": 0,
+  "supported_task_ids": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    7
+  ],
+  "routes": {
+    "0": {
+      "task_name": "turning_on_radio",
+      "actor": "checkpoint_2",
+      "condition": "RT-EXPO",
+      "auxiliary": "task000/auxiliary",
+      "critic_assets": "task000/critic-assets",
+      "selection": "candidate_only_not_final"
+    },
+    "1": {
+      "task_name": "picking_up_trash",
+      "actor": "checkpoint_2",
+      "condition": "RT-EXPO",
+      "auxiliary": "task001/auxiliary",
+      "critic_assets": "task001/critic-assets",
+      "selection": "candidate_only_not_final"
+    },
+    "2": {
+      "task_name": "putting_away_Halloween_decorations",
+      "actor": "checkpoint_1",
+      "condition": "RT-EXPO",
+      "auxiliary": "task002/auxiliary",
+      "critic_assets": "task002/critic-assets",
+      "selection": "candidate_only_not_final"
+    },
+    "3": {
+      "task_name": "cleaning_up_plates_and_food",
+      "actor": "checkpoint_1",
+      "condition": "RT-EXPO",
+      "auxiliary": "task003/auxiliary",
+      "critic_assets": "task003/critic-assets",
+      "selection": "candidate_only_not_final"
+    },
+    "5": {
+      "task_name": "setting_mousetraps",
+      "actor": "checkpoint_1",
+      "condition": "RT-EXPO",
+      "auxiliary": "task005/auxiliary",
+      "critic_assets": "task005/critic-assets",
+      "selection": "candidate_only_not_final"
+    },
+    "7": {
+      "task_name": "picking_up_toys",
+      "actor": "checkpoint_2",
+      "condition": "RT-EXPO",
+      "auxiliary": "task007/auxiliary",
+      "critic_assets": "task007/critic-assets",
+      "selection": "candidate_only_not_final"
+    }
+  },
+  "unsupported_tasks": "zero_action_not_reported",
+  "user_review_required_before_freeze": true
+}

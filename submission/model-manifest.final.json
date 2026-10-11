@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "frozen_after_user_review",
+  "self_evaluation_authorized": true,
+  "policy_seed": 0,
+  "supported_task_ids": [
+    0,
+    1,
+    2,
+    3,
+    5
+  ],
+  "routes": {
+    "0": {
+      "task_name": "turning_on_radio",
+      "actor": "checkpoint_2",
+      "condition": "RT-EXPO",
+      "auxiliary": "task000/auxiliary",
+      "critic_assets": "task000/critic-assets",
+      "selection": "user_confirmed_A0_plus_RT_final_five"
+    },
+    "1": {
+      "task_name": "picking_up_trash",
+      "actor": "checkpoint_2",
+      "condition": "RT-EXPO",
+      "auxiliary": "task001/auxiliary",
+      "critic_assets": "task001/critic-assets",
+      "selection": "user_confirmed_A0_plus_RT_final_five"
+    },
+    "2": {
+      "task_name": "putting_away_Halloween_decorations",
+      "actor": "checkpoint_1",
+      "condition": "RT-EXPO",
+      "auxiliary": "task002/auxiliary",
+      "critic_assets": "task002/critic-assets",
+      "selection": "user_confirmed_A0_plus_RT_final_five"
+    },
+    "3": {
+      "task_name": "cleaning_up_plates_and_food",
+      "actor": "checkpoint_1",
+      "condition": "RT-EXPO",
+      "auxiliary": "task003/auxiliary",
+      "critic_assets": "task003/critic-assets",
+      "selection": "user_confirmed_A0_plus_RT_final_five"
+    },
+    "5": {
+      "task_name": "setting_mousetraps",
+      "actor": "checkpoint_1",
+      "condition": "RT-EXPO",
+      "auxiliary": "task005/auxiliary",
+      "critic_assets": "task005/critic-assets",
+      "selection": "user_confirmed_A0_plus_RT_final_five"
+    }
+  },
+  "unsupported_tasks": "zero_action_not_reported",
+  "user_review_required_before_freeze": false,
+  "decision_utc": "2026-10-10T22:41:02.468826+00:00",
+  "execution_scope": "002 -> 001 -> 005; public0-3 once per task; total12. Preserve running task002 and all original outputs. Policy routes remain frozen; tasks000/003 are not evaluated in this partial submission. Then analyze backed-up videos and all data in web ChatGPT.",
+  "selection_objective": "Complete 12-trial partial A0+RT submission and hand off all backed-up evidence for web analysis.",
+  "public_reuse_rules_confirmed": true,
+  "pilot_only_task_ids": [
+    7
+  ],
+  "planned_rollouts": 12,
+  "public_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "rollouts_per_instance": 1,
+  "partial_submission": true,
+  "scope_decision_utc": "2026-10-11T04:15:30.845107+00:00",
+  "public_reuse_rule_source": "https://behavior.stanford.edu/challenge/updates.html",
+  "evaluation_task_order": [
+    2,
+    1,
+    5
+  ],
+  "evaluation_task_ids": [
+    2,
+    1,
+    5
+  ]
+}

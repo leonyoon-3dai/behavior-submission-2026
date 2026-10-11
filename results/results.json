@@ -1,0 +1,148 @@
+{
+  "rows": [
+    {
+      "key": "task002-public0-seed0",
+      "task_id": 2,
+      "task_name": "putting_away_Halloween_decorations",
+      "public_index": 0,
+      "native_instance_id": 301,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.5714285714285714,
+      "steps": 20683
+    },
+    {
+      "key": "task002-public1-seed0",
+      "task_id": 2,
+      "task_name": "putting_away_Halloween_decorations",
+      "public_index": 1,
+      "native_instance_id": 302,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.7142857142857143,
+      "steps": 20683
+    },
+    {
+      "key": "task002-public2-seed0",
+      "task_id": 2,
+      "task_name": "putting_away_Halloween_decorations",
+      "public_index": 2,
+      "native_instance_id": 303,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.5714285714285714,
+      "steps": 20683
+    },
+    {
+      "key": "task002-public3-seed0",
+      "task_id": 2,
+      "task_name": "putting_away_Halloween_decorations",
+      "public_index": 3,
+      "native_instance_id": 304,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.0,
+      "steps": 20683
+    },
+    {
+      "key": "task001-public0-seed0",
+      "task_id": 1,
+      "task_name": "picking_up_trash",
+      "public_index": 0,
+      "native_instance_id": 301,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.0,
+      "steps": 7902
+    },
+    {
+      "key": "task001-public1-seed0",
+      "task_id": 1,
+      "task_name": "picking_up_trash",
+      "public_index": 1,
+      "native_instance_id": 302,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.0,
+      "steps": 7902
+    },
+    {
+      "key": "task001-public2-seed0",
+      "task_id": 1,
+      "task_name": "picking_up_trash",
+      "public_index": 2,
+      "native_instance_id": 303,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.0,
+      "steps": 7902
+    },
+    {
+      "key": "task001-public3-seed0",
+      "task_id": 1,
+      "task_name": "picking_up_trash",
+      "public_index": 3,
+      "native_instance_id": 304,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.0,
+      "steps": 7902
+    },
+    {
+      "key": "task005-public0-seed0",
+      "task_id": 5,
+      "task_name": "setting_mousetraps",
+      "public_index": 0,
+      "native_instance_id": 301,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.0,
+      "steps": 15295
+    },
+    {
+      "key": "task005-public1-seed0",
+      "task_id": 5,
+      "task_name": "setting_mousetraps",
+      "public_index": 1,
+      "native_instance_id": 302,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.5,
+      "steps": 15295
+    },
+    {
+      "key": "task005-public2-seed0",
+      "task_id": 5,
+      "task_name": "setting_mousetraps",
+      "public_index": 2,
+      "native_instance_id": 303,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.0,
+      "steps": 15295
+    },
+    {
+      "key": "task005-public3-seed0",
+      "task_id": 5,
+      "task_name": "setting_mousetraps",
+      "public_index": 3,
+      "native_instance_id": 304,
+      "seed": 0,
+      "success": false,
+      "official_Q_final": 0.3333333333333333,
+      "steps": 15295
+    }
+  ],
+  "submitted_rollouts": 12,
+  "public_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "unsubmitted_instances_count_as_zero": true,
+  "mean_Q_submitted_trials": 0.2242063492063492,
+  "mean_Q_three_evaluated_tasks_with_missing_zero": 0.08968253968253967,
+  "mean_Q_five_tasks_with_missing_zero": 0.05380952380952381,
+  "mean_Q_100_task_denominator": 0.00269047619047619
+}
