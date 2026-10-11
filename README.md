@@ -1,78 +1,73 @@
-# robogoomy · Ilia + EXPO-RT
+# robogoomy | BEHAVIOR 2026
 
-> Submitted October 11, 2026. Team **robogoomy** · **Ilia + EXPO-RT**. Leaderboard status: **Under verification**. Submission ID: `20261011T111517Z-robogoomy-ilia-expo-rt`. Receipt confirms acceptance; organizer performance verification is pending.
+**Ilia + EXPO-RT — learning small action corrections for household robots.**
 
-**BEHAVIOR-1K 2026 | Leonard Yoon | Independent**
+Leonard Yoon · Independent researcher
 
-- **Goal:** evaluate a frozen household-manipulation policy with small task-specific action edits.
-- **Final scope:** 3 tasks × 4 public instances × 1 rollout = **12 rollouts**.
-- **Evaluation order:** 002 → 001 → 005; public indices 0–3.
-- **Status:** all 12 final rollouts completed and backed up; portal acceptance is recorded separately.
+Can small learned corrections help a pretrained robot policy complete household tasks? We test Ilia's released policy with EXPO-RT in simulated homes and share the results, videos, and code here.
 
-## Start here
+> **Submitted October 11, 2026 · Under verification.** Portal acceptance is confirmed; organizer performance verification is pending.
 
-- [Evaluation README](EVALUATION-README.md): image, setup, full evaluator command, exact wrapper and robot.
-- [Final result ZIP](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/package/submission12-final.zip?download=true): 12 original metric JSON files and reproducibility files.
-- [Video index](VIDEOS.md) / [HF video index](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/blob/main/VIDEOS.md): all 12 original MP4 downloads and checksums.
-- [Public HF storage](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026): results, videos, model image archive, and reports.
+[Run the policy](EVALUATION-README.md) · [Watch the rollouts](VIDEOS.md) · [Presentation](docs/reports/submission-2026/presentation-pilot6-submission12.pdf) · [Download results](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026/resolve/main/package/submission12-final.zip?download=true)
 
 ## Final results
 
-| Task | Public 0 | Public 1 | Public 2 | Public 3 | Mean final Q |
-|---|---:|---:|---:|---:|---:|
-| 002 | 0.5714 | 0.7143 | 0.5714 | 0.0000 | 0.4643 |
-| 001 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0000 |
-| 005 | 0.0000 | 0.5000 | 0.0000 | 0.3333 | 0.2083 |
+**3 tasks · 4 public instances each · 12 rollouts.** One run per instance; all results and original videos are included.
 
-- **Final Q:** proportion of goal conditions satisfied at episode end; higher is better.
-- **Observed 12-rollout mean Q:** 0.224206.
-- **Full success:** 0/12. Partial goal progress does not mean complete task success.
-- **Missing instances count as zero:** selected 3-task/30-instance mean 0.089683; full 100-task/1000-instance mean 0.00269048.
-- **No cherry-picking:** all final failures and videos are included unchanged.
-- These are self-reported values; the observed-panel mean is not the full leaderboard score.
+| Task | Mean final Q | Fully completed |
+|---|---:|---:|
+| 002 · Put away Halloween decorations | 0.4643 | 0/4 |
+| 001 · Pick up trash | 0.0000 | 0/4 |
+| 005 · Set mousetraps | 0.2083 | 0/4 |
 
-![Final 12 results](docs/reports/submission-2026/submission12-status.png)
+**Q is the fraction of goals satisfied at episode end.** Mean Q was **0.224206**, with partial progress but **0/12 complete successes**.
 
-## How the policy works
+![Final goal progress for each of the 12 rollouts](docs/reports/submission-2026/submission12-status.png)
 
-- **Frozen actor:** original released Ilia checkpoint 1 or 2; actor weights are unchanged during EXPO adaptation.
-- **Auxiliary adaptation:** 20 official demos per task, 1,000 updates, batch size 8.
-- **Candidate selection:** two actor proposals plus one small residual edit; target critics choose a candidate.
-- **Real-time execution:** execute 15 actions, carry 4; retain native stage voting and correction rules.
-- **Supported image routes:** 000, 001, 002, 003, 005. Only 001, 002, 005 contribute final self-evaluation outputs.
+**Self-reported:** counting unsubmitted instances as zero gives **0.00269048** over the full 1,000-instance challenge. The 12-rollout mean is not the leaderboard score. [Per-instance results](results/results.csv)
 
-![Policy pipeline](docs/reports/submission-2026/policy-pipeline.png)
+## The approach
 
-## Development pilot
+1. **Propose:** Ilia generates two action sequences.
+2. **Refine:** a small network adds one edited alternative.
+3. **Choose:** learned value networks select a candidate; Ilia's stage tracking and correction rules guide execution.
 
-- **Separate panel:** 6 tasks × 3 development instances × A0/RT = 36 rollouts.
-- **Tasks:** 000 radio; 001 trash; 002 Halloween decorations; 003 plates/food; 005 mousetraps; 007 toys.
-- **Overall outcome:** mean final Q 0.455 → 0.329; full success 5/18 → 1/18.
-- The pilot does not establish a general RT advantage. It is not mixed into the final 12-result ZIP.
+![Frozen Ilia policy with EXPO-RT action editing and selection](docs/reports/submission-2026/policy-pipeline.png)
 
-![Six-task pilot comparison](docs/reports/submission-2026/pilot6-Q.png)
+Ilia's weights stay frozen. Task-specific networks train on **20 official demonstrations for 1,000 updates**. [Implementation](docs/submission-2026/ILIA-RT-EXPO-INFERENCE-AUDIT.md)
 
-## Run and inspect
+## What we learned
 
-- **Policy image:** `ghcr.io/leonyoon-3dai/behavior-submission-2026:submission12-20261011`. Use the digest-pinned command in the [evaluation README](EVALUATION-README.md).
-- Embedded weights; no external model mount or HF token required.
-- Simulator runs outside the policy image; one GPU and one evaluator connection per policy server.
-- Current L40S deployment check passed: 5 routes, seeded reset, route switching; peak memory 7,317 MiB.
-- A real 24GB GPU test was intentionally skipped. L40S measurements do not prove actual 24GB support.
+In a separate **6-task, 36-rollout pilot**, adding RT to the original policy (A0) reduced mean Q from **0.455 to 0.329** and successes from **5/18 to 1/18**. RT did not improve overall performance.
 
-## Research documents
+![Original policy versus action editing in the six-task development pilot](docs/reports/submission-2026/pilot6-Q.png)
 
-- [Presentation PDF](docs/reports/submission-2026/presentation-pilot6-submission12.pdf): visual overview, method, pilot, final results, deployment, limitations.
-- [Research manuscript draft](docs/reports/submission-2026/research-paper-pilot6-submission12.pdf) / [LaTeX source](docs/reports/submission-2026/research-paper-pilot6-submission12.tex): evidence and reproducibility; not published to arXiv.
-- [Inference audit](docs/submission-2026/ILIA-RT-EXPO-INFERENCE-AUDIT.md): retained Ilia components, online EXPO path, trained versus invoked networks, historical F1 distinction.
-- [Task001 video analysis](docs/submission-2026/task001-failure-analysis/README.md): placement/recovery observations.
-- [Public3 comparison](docs/submission-2026/public3-analysis/README.md): instance-specific evidence and limits.
+The final evaluation used RT only, without a matched A0 comparison. Placement, coordination, and recovery are priorities for future investigation.
 
-## Interpretation and provenance
+[Trash-picking analysis](docs/submission-2026/task001-failure-analysis/README.md) · [Instance comparison](docs/submission-2026/public3-analysis/README.md)
 
-- Public index 0 had prior development exposure; it is not described as an untouched test.
-- Final evaluation is RT-only: no matched final A0 control, significance, or generalization claim.
-- Original metric/video bytes and filenames are preserved; pinned revisions and SHA256 record submission-time identities.
-- Intermediate official Qmax and complete goal traces were not captured; critic Q is a different quantity.
-- Additional research rollouts are deferred. Future F1+RT is a research note, not this submitted policy.
-- Further editorial updates to these research documents are deferred until after submission.
+## Reproduce and explore
+
+| Resource | Contents |
+|---|---|
+| [Evaluation guide](EVALUATION-README.md) | Docker, commands, wrapper, and robot config |
+| [Policy source](submission/README.md) | Server interface and task routing |
+| [Hugging Face archive](https://huggingface.co/leonayoon/behavior-submission-task001-002-005-public0-3-2026) | Results, videos, image archive, and reports |
+| [Video index](VIDEOS.md) | 12 original videos and checksums |
+| [Research draft](docs/reports/submission-2026/research-paper-pilot6-submission12.pdf) · [LaTeX](docs/reports/submission-2026/research-paper-pilot6-submission12.tex) | Method and analysis; not published to arXiv |
+
+Docker includes the weights; no Hugging Face token is needed. The simulator runs separately. L40S deployment checks passed; **actual 24GB hardware remains untested**.
+
+<details>
+<summary>Evaluation scope and provenance</summary>
+
+- Final order: 002, 001, 005; public indices 0–3, one rollout each.
+- Image routes: 000, 001, 002, 003, 005. Task 007 was pilot-only.
+- Public index 0 had development exposure; it is not an untouched test.
+- Pilot results are separate. No statistical significance claim is made.
+- Official Q differs from critic predictions. Intermediate Q maxima and complete goal traces were not captured.
+- The three-task, 30-instance mean, including missing zeros, is 0.089683.
+- Original results and videos remain unchanged; revisions and SHA256 checksums preserve their identities.
+- Submission ID: `20261011T111517Z-robogoomy-ilia-expo-rt`.
+
+</details>

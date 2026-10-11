@@ -1,15 +1,56 @@
-# 제출 정책 및 재현 코드
+# Submission policy and runtime
 
-현재 평가: **002 → 001 → 005, public 0–3 각 1회, 총 12회**. 이후 추가 연구 실험은 하지 않습니다. [최종 제출 순서](../docs/operations/AFTER-SERVER-SUBMISSION.md) · [현재 context](../docs/operations/CURRENT-CONTEXT.md).
+Policy server for the **12 completed self-evaluation rollouts**: tasks **001, 002, and 005**, public instances **0–3**, once each.
 
-최종 manifest는 사용자 확정 A0+RT5task이며, 현재 clean4GPU의 사전 검증을 통과해 총12회를 진행 중이다. actor checkpoint1/2와 task별 auxiliary/normalization은 한 단위로 전환한다. 공식 입력 batch1만 지원하며 출력은 `(1,23)`이다. 정책은RGB/proprio/task_id만 사용하며 privileged 상태는 버린다. 추가depth는 관측에 있어도 사용하지 않는다.
+**Start here:** [Evaluation and Docker launch instructions](../EVALUATION-README.md) · [Results overview](../README.md) · [Original videos](../VIDEOS.md)
 
-- `contract.py`: 공식 leading batch를 native wrapper용으로 변환. 여러 환경·클라이언트 상태 공유를 허용하지 않는다.
-- `policy.py`: 원본A0 또는 기존 설정의RT. 원본26/4/20,RT15/4/15 실행주기 보존. `.arm()`은RT에만 적용한다.
-- `server.py`: `/healthz`, `/metadata`,msgpack WebSocket,reset 무응답. 모델은 첫 관측에서lazy load하므로healthz만으로 모델준비를 주장하지 않는다. CPU mock 옵션은 계약검사용이며 제출runner가 거부한다.
-- `auxiliary.py`: optimizer를 제거한 inference params. 원본 학습과 optimizer는별도 연구archive에 보존한다.
-- `Dockerfile`: 현 정책환경snapshot,실제base digest고정. portablePython+installed packages로 lock한다. 호스트local editable 경로는컨테이너PYTHONPATH로 대체한다.
+## Task coverage
 
-최종 제출 지원범위는000·001·002·003·005. 007은 보존한 파일럿 모델에만 존재하며 최종 manifest에서 제외한다. 범위 밖은zero action 반환이며지원/성능을 주장하지 않는다. 주최측 partial Docker 처리 요구를 확인할 때 이 동작을 명시한다. 이번 runner는다른task를 실행하지 않는다.
+| Task | Activity | Frozen Ilia actor | Included in the 12-rollout panel |
+|---|---|---|---|
+| 000 | Turn on a radio | Checkpoint 2 | No |
+| 001 | Pick up trash | Checkpoint 2 | Yes |
+| 002 | Put away Halloween decorations | Checkpoint 1 | Yes |
+| 003 | Clean up plates and food | Checkpoint 1 | No |
+| 005 | Set mousetraps | Checkpoint 1 | Yes |
 
-모델은 `/models`,로그는 `/logs` mount. runtime 이미지와model bundle은별도HF archive로복원한다. registry 공개/인증이 아직 확정되지 않으면Docker 접수준비 완료로 표시하지 않는다. 모델 포함 self-contained release의 CPU contract는 확인했지만 registry 게시와 실제24GB 검증은 미완료다. 실행 정책의 weights/seed는 바꾸지 않는다.
+All five routes use **Ilia + EXPO-RT**, seed `0`, with matching actor, auxiliary weights, and normalization assets. Task 007 is pilot-only and excluded. **Unsupported tasks return zero actions**; no performance is claimed.
+
+## Input and output
+
+Use **one connection and one environment per server**, with no evaluator-side action-chunk replay.
+
+| Field | Required shape or behavior |
+|---|---|
+| Robot state | Finite proprioception, `(1, 61)` |
+| Camera input | Head and two wrist images; each `uint8`, `(1, H, W, 3)` or `(1, H, W, 4)` |
+| Task ID | Integer array, `(1,)` or `(1, 1)` |
+| Action output | Finite `float32`, `(1, 23)` |
+| Reset | Clears episode state; no response message |
+
+RGB is resized internally. Depth and privileged simulator fields are discarded.
+
+## Code map
+
+| File | Role |
+|---|---|
+| [`contract.py`](contract.py) | Validates inputs/outputs and switches task routes. |
+| [`policy.py`](policy.py) | Loads Ilia and EXPO-RT; retains stage voting and correction rules. |
+| [`server.py`](server.py) | Msgpack WebSocket on port `8000`; HTTP `/healthz` and `/metadata`. |
+| [`auxiliary.py`](auxiliary.py) | Loads inference parameters without optimizer state. |
+| [`scope.py`](scope.py) | Defines pilot, policy, and evaluation coverage. |
+| [`model-manifest.final.json`](model-manifest.final.json) | Frozen routes and evaluation scope. |
+| [`Dockerfile`](Dockerfile) | Runtime template; requires a prepared build context. |
+
+EXPO-RT executes 15 uncompressed actions and carries four into the next prediction. See the [inference audit](../docs/submission-2026/ILIA-RT-EXPO-INFERENCE-AUDIT.md) for scheduling, candidate selection, and baseline differences.
+
+## Release status
+
+- **Public image:** `ghcr.io/leonyoon-3dai/behavior-submission-2026:submission12-20261011`.
+- **Anonymous digest-pinned pull verified.** Launch instructions are linked above.
+- **Weights embedded at `/models`.** No external model mount or Hugging Face token required. Optional logs: `/logs`.
+- **Separate simulator**, using organizer-provided BEHAVIOR assets.
+- **Lazy loading:** the first observation loads its route. `/healthz` alone does not validate inference.
+- **Deployment checks passed; a physical 24 GB GPU remains untested.** L40S measurements do not establish 24 GB compatibility.
+
+Use the published image for evaluation. Never enable `--contract-smoke-only`: it returns mock actions.

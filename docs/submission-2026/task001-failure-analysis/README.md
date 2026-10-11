@@ -1,39 +1,50 @@
-# 001 picking_up_trash — public0–3 실패 분석
+# Task001: picking up trash
 
-2026-10-11, 동결된 RT-EXPO 정책의 완료된 원본 영상·JSON·추론 로그를 읽기 전용으로 비교했다. 추가 평가나 정책 변경은 하지 않았다. 영상표본은 시뮬레이션 시간 0/40/79/132/184/237초이며 벽시계 시간이 아니다.
+Failure review of public instances 0–3, October 11, 2026. Original videos, JSON files, and inference logs were inspected without extra evaluation or changes to the frozen RT-EXPO policy. Video samples are at **0/40/79/132/184/237 seconds of simulation time**, not wall-clock time. See [final submission results](../../../README.md#final-results).
 
-## 결론과 확실성
+## Main finding
 
-모든 public에서 캔·쓰레기통을 다루는 행동은 관찰되지만 중후반 양손에 물체가 가까이 보이는 자세가 반복된다. 공통적인 병목은 **캔을 통 안으로 옮기는 단계의 양손 상대 위치/통 자세 제어와 다음 행동으로 전환**으로 추정된다. 원본 목표는 세 캔 각각 `inside(can, ashcan)`이며 단순 집기에는 점수가 없다. 놓기 자체는 별도 목표 술어가 아니고 내부 위치가 실제 판정 조건이다. 영상표본만으로 정확한 그립 부착/충돌/물체의3D좌표/순간 목표 상태는 확정하지 않는다.
+**The robot handles the objects but does not complete the placement goal.** All four instances show repeated mid-to-late poses with objects close to both hands. A likely bottleneck is coordinating the hands and trash-can orientation during insertion, then moving to the next action.
 
-|public|공식Q|steps|추론구간 수|base/left/right 이동(m)|slow 추론 중앙값(s)|
+The goal requires `inside(can, ashcan)` for each of three cans. Grasping alone earns no credit; release is not a separate goal predicate. The actual condition is whether the can is inside the trash can. Video samples cannot confirm exact grasp attachment, collisions, 3D positions, or moment-by-moment goal states.
+
+|Public instance|Official Q|Steps|Inference intervals|Base/left/right travel (m)|Median slow inference (s)|
 |---|---:|---:|---:|---|---:|
 |0|0|7902|527|12.27 /21.72 /20.71|0.1521|
 |1|0|7902|527|5.09 /10.29 /10.89|0.1525|
 |2|0|7902|527|8.17 /16.32 /17.75|0.1565|
 |3|0|7902|527|6.15 /11.13 /12.86|0.1513|
 
-## 인스턴스 비교
+## Comparing the instances
 
-- public0: 초반 이동이 많다. 79–132초에는 오른손 부근에 통이 보이고, 184초에는 왼쪽 wrist에 파란 캔이 크게 보인다. 184–237초 머리 카메라는 소파 주변의 비슷한 시점이며 통을 기울이는 자세가 이어진다. 이동량은 최대지만 최종 inside 목표는 달성하지 못했다.
-- public1: 40초에 오른손 부근 통, 79초 이후 왼쪽 wrist에 캔이 보인다. 132–237초 비슷한 시점과 통을 든 자세가 반복된다. 이동량이 가장 작아 중후반 정체를 시사한다.
-- public2: 79초에 오른손 부근 통, 132초 이후 왼쪽 wrist에 주황 캔이 보인다. 184–237초에도 양손의 물체가 가까이 보인다. 통 입구와 캔의 상대 위치를 맞추지 못했을 가능성이 있다.
-- public3: 오른손 부근 통과 왼쪽 wrist의 파란 캔이 중후반 반복된다. public3만의 특이한 장애라기보다 네 인스턴스의 공통 실패 양상이다.
+|Instance|Observed sequence|Interpretation|
+|---|---|---|
+|public0|Extensive early movement. Trash can near the right hand at 79–132 s; blue can fills the left wrist view at 184 s. Similar head-camera views near the sofa and a tilted trash can at 184–237 s.|Most movement, but no final `inside` goals achieved.|
+|public1|Trash can near the right hand at 40 s; can in the left wrist view after 79 s. Similar viewpoints and holding poses at 132–237 s.|Lowest travel suggests mid-to-late stalling.|
+|public2|Trash can near the right hand at 79 s; orange can in the left wrist view after 132 s. Objects remain close to both hands at 184–237 s.|The can may not align with the trash-can opening.|
+|public3|Trash can near the right hand and blue can near the left wrist recur in later samples.|A shared failure pattern, rather than evidence of an instance-specific fault.|
 
-## 실행 검증과 원인 후보
+![Task001 public3: sampled camera views](public3.jpg)
 
-모두 최대7902스텝,527개 추론 로그를 기록하고 정상 timeout 종료했다. reconnect/Traceback에 의한 중단은 로그에서 발견되지 않았다. 동일한 frozen manifest SHA와 task_name=picking_up_trash를 사용했다. 정책 추론시간은 정상 범위로 유사하다. CPU를11로 올린0/2와10.5인1/3 모두 같은 실패라 CPU증설이 실패를 해결한 근거는 없다.
+Compare all samples: [public0](public0.jpg), [public1](public1.jpg), [public2](public2.jpg), [public3](public3.jpg).
 
-모두 grasp constraint의 disjointed body transforms 경고가 있었다. 이는 잡기 동작의 물리 상태 불일치 후보이지만 경고만으로 버그/주원인이라고 단정할 수 없다. 다른task의 부분성공 rollout에서도 유사경고가 있다.
+## What the logs establish
 
-RT edit선택 비율은25.0–27.1%로 유사하다. 내부critic예측값은 공식Q가 아니고, 후보들의 실제inside 달성 결과가 기록되지 않아 critic오선택이 주원인인지 분리할 수 없다. actor의 삽입 행동 부족, critic/edit의 잘못된 후보선택, 통을 든 상태에서의시야가림/충돌과 정체탈출 실패는 후속연구 후보다. A0동일인스턴스 대조실험이 없으므로 RT만의 문제라고 확정하지 않는다.
+- All runs completed the full **7902 steps** and **527 inference log entries**, ending at the normal time limit. No reconnect- or Traceback-related interruption was found.
+- All used the same frozen manifest SHA and `task_name=picking_up_trash`. Inference times were similar and within the observed normal range.
+- At the time of analysis, simulator CPU quotas were **11** for instances 0/2 and **10.5** for instances 1/3. These are resource ceilings, not dedicated cores. Both groups failed, so these runs do not show that extra CPU capacity resolves the failure.
+- Every run logged grasp-constraint warnings about `disjointed body transforms`. These could indicate a grasp-physics mismatch, but similar warnings also occur in other tasks with partial success. The warning alone does not establish a bug or root cause.
+- RT edited candidates were selected **25.0–27.1%** of the time. Critic predictions are not official Q, and actual `inside` outcomes for alternative candidates were not recorded. These logs cannot isolate critic misranking as the cause.
 
-개발pilot의001 RT평균Q0.667은 public0와train23/24, 다른wrapper/프로토콜을 포함하는 개발패널이라 이번public0–3과 직접 대조가 아니다. 차이가 큰 것은 기록하되 원인으로 단정하지 않는다.
+**Open hypotheses:** insufficient insertion behavior in the base actor; poor candidate selection by the critic/edit policy; occlusion or collisions while holding the trash can; and failure to recover from a stalled pose. There is no A0 control on the same instances, so the failure cannot be attributed specifically to RT.
 
-## 후속 분석 (새 GPU 평가 없이)
+The development pilot's Task001 RT mean Q of **0.667** came from public0 and train23/24 with a different wrapper/protocol. It is not a controlled comparison with these public0–3 runs. The difference is documented, but its cause remains unresolved.
 
-전체 원본영상에서 처음통/캔을잡은시점, 첫삽입시도, 정체시작, 마지막자세를 라벨링한다. 행동·물체상태 trajectory는 이번보존파일에 없으므로 영상으로 물리상태를 정확히 복원했다고 주장하지 않는다. 그립해제/후퇴/통자세복원과정체감지, 손목시야가림 대처는 다음연구 설계후보이며 이번최종정책은변경하지 않는다.
+## Next analysis, using existing recordings
 
-- [공식 BDDL](https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/bd049de3119acdcdf2334fe9e1ebe060fa20c108/bddl3/bddl/activity_definitions/picking_up_trash/problem0.bddl)
-- [공식 Q 정의](https://behavior.stanford.edu/challenge/evaluation.html)
-- 영상표본: [public0](public0.jpg), [public1](public1.jpg), [public2](public2.jpg), [public3](public3.jpg)
+Label the first trash-can/can grasp, first insertion attempt, stall onset, and final pose in the full videos. Saved files do not include action and object-state trajectories, so video review cannot reconstruct exact physical states.
+
+Future research candidates include releasing and retreating, restoring trash-can orientation, detecting stalls, and handling blocked wrist views. **The submitted final policy remains unchanged.**
+
+- [Official BDDL task definition](https://raw.githubusercontent.com/StanfordVL/BEHAVIOR-1K/bd049de3119acdcdf2334fe9e1ebe060fa20c108/bddl3/bddl/activity_definitions/picking_up_trash/problem0.bddl)
+- [Official Q definition](https://behavior.stanford.edu/challenge/evaluation.html)

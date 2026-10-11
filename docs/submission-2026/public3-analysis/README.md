@@ -1,31 +1,37 @@
-# Public 3 실패 비교 분석 — 2026-10-11
+# Public instance 3: failure comparison
 
-최종 동결 정책 평가의 완료 영상과 원본 metrics, inference 로그를 읽기 전용으로 비교했다. 추가 rollout이나 정책 수정은 하지 않았다. 영상은 6개 시점 표본이며 모든 순간의 물체 상태를 증명하지 않는다.
+Read-only review of completed videos, original metrics, and inference logs on October 11, 2026. No extra rollouts or policy changes were made. Six sampled video frames cannot establish object states throughout an episode.
 
-## 확인한 결과
+**Historical analysis:** some comparisons below were incomplete at the time of review. All 12 final rollouts are now complete; see [final results](../../../README.md#final-results).
 
-|002 public|최종 Q|스텝|추론 로그 수|시작부터 완료(분)|base 이동(m)|slow 추론 중앙값(s)|
+## Measured results
+
+|Task002 public instance|Final Q|Steps|Inference log entries|Elapsed time (min)|Base travel (m)|Median slow inference (s)|
 |---|---:|---:|---:|---:|---:|---:|
 |0|0.5714|20683|1379|335.05|28.35|0.1513|
 |1|0.7143|20683|1379|321.19|29.61|0.1523|
 |2|0.5714|20683|1379|335.72|24.08|0.1548|
 |3|0.0000|20683|1379|274.09|11.14|0.1518|
 
-public3도 동일 최대 스텝과 추론 호출 수를 실행했다. 정책 추론 중앙값에 큰 차이는 없다. 빠른 종료는 조기 중단이나 누락된 스텝으로 설명되지 않는다. base/손 이동량은 다른 인스턴스보다 작다. 움직임·접촉·관측 장면 차이가 시뮬레이션 비용에 영향을 줬을 가능성이 있으나 로그만으로 원인을 확정할 수 없다. GPU3 장애 근거는 발견되지 않았다.
+**Task002 public3 ran the full step budget.** It recorded the same number of inference calls and similar median inference time as the other instances. Its shorter runtime is not explained by early termination or missing steps. Base and hand travel were lower. Motion, contact, or scene differences may have changed simulation cost, but the logs do not establish a cause. No evidence of a GPU3 failure was found.
 
-001 public3은 06:28:40 UTC에 시작해 08:16:05 UTC에 종료했다(107.40분). 다른001 인스턴스보다 먼저 시작했으며 최근 측정FPS는 다른 작업과 유사했다. 7902스텝,527추론 로그를 모두 실행했고 최종Q0.0이다. 다른001 public0–2는 분석 시점 미완료여서 공식Q 비교는 아직 불가능하다.
+Task001 public3 ran from 06:28:40 to 08:16:05 UTC (107.40 min), starting before the other Task001 instances. Recent FPS measurements were comparable to other tasks. It completed 7902 steps and 527 inference log entries with final Q 0.0. Public0–2 were unfinished **at the time of this analysis**; their completed comparison is in the [Task001 review](../task001-failure-analysis/README.md).
 
-## 영상에서 관찰한 실패 양상
+## What the video samples show
 
-- 002 public3: 초기 장면은 정상적으로 보인다. 약230–575초의 시뮬레이션 시간 표본에서는 양쪽 wrist에 큰 밝은 물체가 매우 가까이 보이며, 머리 카메라는 주로 TV·벽난로 주변을 본다. 물체를 잡은 후 목표 위치로 운반/놓는 단계에 정체되고 wrist 시야가 가려졌을 가능성이 있다. 물체 정체나 모든 목표 상태는 표본만으로 확정하지 않는다.
-- 002 public0: 호박을 잡고 다른 물체·위치로 행동이 이어지는 표본이 보이며, 공식 최종Q는0.5714다.
-- 001 public3: 약44초에 오른손 부근에 쓰레기통이 보이고, 약88–220초 표본에서도 통을 들고 있는 듯한 자세가 반복된다. 약132초 이후 왼쪽 wrist에 캔이 가까이 보인다. 캔을 잡는 것과 쓰레기통 안에 넣고 놓는 것은 다른 단계이며, 최종Q0은 목표 술어가 끝 시점에 충족되지 않았음을 뜻한다. 통과 캔을 동시에 잡은 후 넣기/놓기 단계가 막힌 것으로 의심되지만 원본 영상 전체와 최종 상태 추가 분석이 필요하다.
+|Run|Observation|Possible explanation—not confirmed|
+|---|---|---|
+|Task002 public3|Initial scene appears normal. At about 230–575 s of simulation time, large bright objects are close to both wrist cameras; the head camera mainly faces the TV/fireplace.|Stalling during transport or placement, with blocked wrist views. Samples do not establish object identity or all goal states.|
+|Task002 public0|Samples show a pumpkin grasp followed by actions toward other objects or locations. Final official Q: 0.5714.|Some goal progress, without complete task success.|
+|Task001 public3|A trash can appears near the right hand at about 44 s. A similar holding posture repeats at about 88–220 s; a can is close to the left wrist after about 132 s.|Stalling during insertion/release after grasping both objects. Full-video and final-state analysis are needed to confirm this.|
 
-공식Q는 **종료 시점** 만족한 목표 BDDL 술어 비율이다. 따라서 최종Q0만으로 실행 내내Q0이었다고 할 수 없다. 내부 `learned_Q_values`는 학습한 critic의 예측값이며 공식Q와 같지 않다.
+![Task002 public3: sampled camera views](task002-public3-detail.jpg)
 
-- [공식 평가 문서](https://behavior.stanford.edu/challenge/evaluation.html)
-- [002 public3 표본](task002-public3-detail.jpg)
-- [002 public0 표본](task002-public0.jpg)
-- [001 public3 표본](task001-public3-detail.jpg)
+Grasping a can and putting it inside the trash can are different stages. **Official Q measures the fraction of BDDL goal predicates satisfied at episode end.** Final Q 0 does not prove that Q stayed at 0 throughout the rollout. Internal `learned_Q_values` are critic predictions, not official Q.
 
-원본 영상/JSON은 outputs/clean-self-eval-20261011의 해당 trial/raw 아래 보존되고, HF 백업에는 원본을 변경 없이 보존한다. 최종12회가 끝난 뒤 실패 분석에 활용하며 재평가는 진행하지 않는다.
+- [Official evaluation documentation](https://behavior.stanford.edu/challenge/evaluation.html)
+- [Task002 public3 samples](task002-public3-detail.jpg)
+- [Task002 public0 samples](task002-public0.jpg)
+- [Task001 public3 samples](task001-public3-detail.jpg)
+
+Original videos and JSON files are preserved under each `trial/raw` directory in `outputs/clean-self-eval-20261011` and backed up unchanged to Hugging Face. The completed 12-rollout set is retained for analysis; this review does not trigger re-evaluation.
