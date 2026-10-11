@@ -66,7 +66,7 @@ The six-task pilot previously used public index0 and training instances23/24. Th
 
 ## Runtime evidence and limits
 
-Deployment check: `in_progress`. It uses synthetic RGB/proprio, tests finite35 actions per route, seeded reset, and route transitions with embedded weights. Physical rollouts added:0. Peak current-device memory: `pending` MiB. A real single24GB GPU test was skipped by user choice (`actual_24gb_tested=false`); current L40S measurements do not prove actual24GB support.
+Deployment check: `PASS`. It uses synthetic RGB/proprio, tests finite35 actions per route, seeded reset, and route transitions with embedded weights. Physical rollouts added:0. Peak current-device memory: `7317` MiB. A real single24GB GPU test was skipped by user choice (`actual_24gb_tested=false`); current L40S measurements do not prove actual24GB support.
 
 The final self-evaluation used four L40S GPUs with policy and simulator sharing each GPU, 46 logical CPUs, changing simulator cgroup quotas recorded during execution (7→10→10.5, 0/2→11→12, then remaining0/1/2→15). These are resource ceilings, not dedicated core counts. Policy quota4. Completed raw files record simulation steps/time; critic timing and periodic progress estimates are not exact official action-to-action timing traces. The official average1FPS/600-second round-trip requirement must be assessed using its stated measurement definition; no exact episode-level timing proof is claimed from periodic samples alone.
 

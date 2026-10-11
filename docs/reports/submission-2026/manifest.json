@@ -1,16 +1,17 @@
 {
-  "updated_utc": "2026-10-11T10:19:20.963444+00:00",
+  "updated_utc": "2026-10-11T10:57:18.780635+00:00",
   "completed_submission_rollouts": 12,
-  "authors_confirmed": false,
+  "authors_confirmed": true,
   "arxiv_submitted": false,
-  "builder_sha256": "01562de46d82f27d8efee9786a3db18e9a105e687897c19b0632532f91c784f5",
+  "builder_sha256": "88c0bdfb816d8ffece77a7409c1642cdc1d48a2eb86540a9fea6a17493db63fc",
   "files_sha256": {
-    "research-paper-pilot6-submission12.pdf": "3c1e8ceca99c4cdd6d03af7b2676ba40f4d76972477862a74ac6c2d10f7aa700",
-    "research-paper-pilot6-submission12.tex": "145dd5e174f40643adb6a3d0b8f15992a9bed307536f5ec0b5c6abcffdfeaf21",
+    "research-paper-pilot6-submission12.pdf": "ba7d1f52915914df481005442e30e0d63cc838f7fa87b8e377c24240b1293e3f",
+    "research-paper-pilot6-submission12.tex": "237dede9f6c3940315e6bd395fd3d688381ae9be561f078913490f7d3d765b0f",
     "requirements.lock.txt": "f3471a99f86fdf2479c56d9bd0075fc4bb6927f821ec920d606f69e85a06ac78",
     "submission12-status.png": "6f40fd1bb298910a5883bf840fd244e7d127a8e0a53b56f0d7f054e0b8c4e1c0",
-    "results-snapshot.json": "1eb8d7a93692b110d1afced453f16700b484692d0b3ea123d1926cf8510622d2",
-    "presentation-pilot6-submission12.pdf": "b782bf52c669d48ecc749ed3861e8616495881d93de78e3a9d0caae4e7285e82",
+    "results-snapshot.json": "ed97049dd585b5aa1c548d18268279d37c60bc44fbc154117a2ce9a6a2e7e2fc",
+    "policy-pipeline.png": "5c563779996568078f1b5908dc085cf1c1c38435891b63d28ba7aa8cbbbc6b64",
+    "presentation-pilot6-submission12.pdf": "7bfb689968aa7277fe1f7bf52b81b9b1fdf76a2da38d9e8a891dd58bb604dbe1",
     "pilot6-Q.png": "3407a600a0be3e76af4726d3686133bae5793cddf6ec179556b55c9f740d4124"
   }
 }

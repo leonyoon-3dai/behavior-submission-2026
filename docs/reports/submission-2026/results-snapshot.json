@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-11T10:19:20.963444+00:00",
+  "updated_utc": "2026-10-11T10:57:18.780635+00:00",
   "pilot6": {
     "completed": 36,
     "tasks": {
@@ -4667,6 +4667,6 @@
     ],
     "portal_submitted": false
   },
-  "authors_confirmed": false,
+  "authors_confirmed": true,
   "arxiv_submitted": false
 }
