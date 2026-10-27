@@ -1,0 +1,130 @@
+{
+  "source_commit": "409aa8bde8455e742bc5f4d087437fedc5d1565c",
+  "created_date": "2026-10-27",
+  "source_notes": "Original participant evaluation frames. Charts use verified-facts.json and results.csv. No evaluation or policy changes.",
+  "assets": [
+    {
+      "file": "adaptation-and-execution.png",
+      "bytes": 75709,
+      "sha256": "06604c1b07a1ec7b1560b9b9722a7c1da5cdf39042d30712d801ba89d7d367dc"
+    },
+    {
+      "file": "development-comparison.png",
+      "bytes": 97875,
+      "sha256": "7ce8970f24e871a342d575163ae17b9bbd75a3901deb303c80471c597e015c62"
+    },
+    {
+      "file": "experiment-overview.jpg",
+      "bytes": 150764,
+      "sha256": "940a4599010e6635bcf2c88dbf8b235de29f8d69ef45db71f9bc04039560d621"
+    },
+    {
+      "file": "final-per-instance.png",
+      "bytes": 85791,
+      "sha256": "5cfd5a2125823f59a3e34cad7402eed7c016e7c48c0de2a56f64bbbd99ead241"
+    },
+    {
+      "file": "policy-interface.jpg",
+      "bytes": 140463,
+      "sha256": "28e9cab231fe259828f7c49c8d1e8c5be33fa3f13f23ebb8f7269649f24920bb"
+    },
+    {
+      "file": "reproducibility.png",
+      "bytes": 62060,
+      "sha256": "adb5a6e43d357e0192b92b33ab75a907bf71fcc6eeb2036bd617b0e54aa01df8"
+    },
+    {
+      "file": "task001-public0-preview.gif",
+      "bytes": 199778,
+      "sha256": "08fc3dc4dcbb3c31ccda2b33d1104cb491901939c3a6d66739e832eb1c488e0a"
+    },
+    {
+      "file": "task001-storyboard.jpg",
+      "bytes": 164058,
+      "sha256": "dbc9071b585544687913c0c8e1ea47259cb8513e125e46e7e1f7bf04d5d8536c"
+    },
+    {
+      "file": "task002-public0-preview.gif",
+      "bytes": 197841,
+      "sha256": "3fd08bedc9f8b5bc64166d68622c35278975a750b84d9ae1441a6a09e5faf470"
+    },
+    {
+      "file": "task005-public1-preview.gif",
+      "bytes": 83981,
+      "sha256": "a37c0c3613f82bce3270b793c11a69403ef944010e30d96ee8028ac076a50a56"
+    }
+  ],
+  "original_videos": [
+    {
+      "file": "task001-public0.mp4",
+      "sha256": "a0ce8f666831747ea77bda6f75d1e9b1b27429f226eb24a218b6e592e40a25cc",
+      "size": 15696296
+    },
+    {
+      "file": "task002-public0.mp4",
+      "sha256": "509fc35e80c5e58420a04ba1f12a78f1eee732e27e66f9c290ac219180b1de71",
+      "size": 38497522
+    },
+    {
+      "file": "task005-public1.mp4",
+      "sha256": "181ef3fd8e1c01c375691444ad3b90ad0ca1f72490f6f8c61ae6ea5bb9322be2",
+      "size": 18081881
+    }
+  ],
+  "video_excerpts": [
+    {
+      "file": "task001-public0-preview.gif",
+      "original": "task001-public0.mp4",
+      "start_video_seconds": 60,
+      "duration_video_seconds": 6,
+      "crop": [
+        224,
+        0,
+        672,
+        448
+      ],
+      "fps": 2,
+      "display_size": [
+        224,
+        224
+      ],
+      "note": "Head camera only; sampled playback excerpt, not wall-clock latency"
+    },
+    {
+      "file": "task002-public0-preview.gif",
+      "original": "task002-public0.mp4",
+      "start_video_seconds": 292,
+      "duration_video_seconds": 6,
+      "crop": [
+        224,
+        0,
+        672,
+        448
+      ],
+      "fps": 2,
+      "display_size": [
+        224,
+        224
+      ],
+      "note": "Head camera only; sampled playback excerpt, not wall-clock latency"
+    },
+    {
+      "file": "task005-public1-preview.gif",
+      "original": "task005-public1.mp4",
+      "start_video_seconds": 100,
+      "duration_video_seconds": 6,
+      "crop": [
+        224,
+        0,
+        672,
+        448
+      ],
+      "fps": 2,
+      "display_size": [
+        224,
+        224
+      ],
+      "note": "Head camera only; sampled playback excerpt, not wall-clock latency"
+    }
+  ]
+}

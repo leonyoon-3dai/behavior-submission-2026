@@ -1,0 +1,4 @@
+.source-cache/
+.video-cache/
+__pycache__/
+*.tmp.gif
